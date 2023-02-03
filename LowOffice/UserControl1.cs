@@ -18,6 +18,10 @@ namespace LowOffice
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
+            textBox10.Visible = false;
+            label11.Visible = false;
+            dateTimePicker2.MinDate = DateTime.Now;
+            dateTimePicker1.MinDate = DateTime.Now;
 
         }
 
@@ -33,12 +37,13 @@ namespace LowOffice
 
 
             string caseNum = textBox3.Text;
-            string Hall = textBox4.Text;
+            string Hall = hall.Text;
+            string typeOfHall = type.Text;
             string circleNum = textBox1.Text;
             string oppenentName = textBox5.Text;
             string attribute = textBox8.Text;
-            string date = dateTimePicker2.Text;
-            string dateOflast = dateTimePicker1.Text;
+            DateTime date = dateTimePicker2.Value;
+            DateTime dateOflast = dateTimePicker1.Value;
             string describtion = textBox11.Text;
             string caseDecision = comboBox1.Text;
             string Lastone = textBox10.Text;
@@ -49,6 +54,7 @@ namespace LowOffice
             {
                 caseNum = caseNum,
                 Hall = Hall,
+                typeOfHall=typeOfHall,
                 circleNum = circleNum,
                 oppenentName = oppenentName,
                 attribute = attribute,
@@ -71,8 +77,9 @@ namespace LowOffice
 
         private void button2_Click(object sender, EventArgs e)
         {
+            type.Text = "";
              textBox3.Text="";
-             textBox4.Text = "";
+             hall.Text = "";
              textBox1.Text = "";
              textBox5.Text = "";
              textBox8.Text = "";
@@ -81,6 +88,26 @@ namespace LowOffice
              textBox11.Text = "";
              comboBox1.Text = "";
              textBox10.Text = "";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBox1.Text== "مؤجلة ")
+            {
+                textBox10.Visible = true;
+                label11.Visible = true;
+                label11.Text = "قرار الجلسة السابقة";
+            }else if(comboBox1.Text=="محكوم")
+            {
+                textBox10.Visible = true;
+                label11.Text = "قرار القضية الكامله";
+                label11.Visible = true;
+
+            }
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
         }
     }
 }

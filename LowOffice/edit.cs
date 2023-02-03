@@ -78,7 +78,7 @@ namespace LowOffice
             if (number != "0"&&count==1&&editcase!=null)
             {
                 
-                MessageBox.Show(editcase.date);
+                MessageBox.Show(editcase.date.ToString());
                  
                 textBox1.Text = cases.circleNum;
                 textBox4.Text = cases.Hall;
@@ -88,8 +88,8 @@ namespace LowOffice
                 textBox11.Text = editcase.describtion;
                 textBox10.Text = editcase.Lastone;
                 comboBox1.Text = editcase.caseDecision;
-                dateTimePicker2.Text = editcase.date;
-                dateTimePicker1.Text = editcase.dateOflast;
+                dateTimePicker2.Value = editcase.date;
+                dateTimePicker1.Value = editcase.dateOflast;
                
             }
         }

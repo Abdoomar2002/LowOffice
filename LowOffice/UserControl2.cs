@@ -18,17 +18,24 @@ namespace LowOffice
             InitializeComponent();
             
         }
-       // update up;
-       
+        // update up;
+        public event EventHandler ButtonClicked;
 
-        private void UserControl2_Load(object sender, EventArgs e)
+
+        public void UserControl2_Load(object sender, EventArgs e)
         {
+            
             CasesContext context = new CasesContext();
             context.Database.EnsureCreated();
 
-            var allCases = context.Cases.FromSqlRaw("SELECT *  FROM Cases ORDER BY Id DESC");
-            
+            //  var allCases = context.Cases.FromSqlRaw("SELECT *  FROM Cases ORDER BY date ASC");
+            var allCases = context.Cases
+                        .AsEnumerable()
+                        .GroupBy(c => c.caseNum)
+                        .Select(g => g.OrderBy(c => c.date).FirstOrDefault()).OrderBy(c=>c.date);
+
             dataGridView1.DataSource = allCases.ToList();
+            dataGridView1.Columns[0].Visible = false;
 
         }
 
@@ -39,20 +46,15 @@ namespace LowOffice
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
-            update.outIndex =int.Parse(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
-            //    up.getData.Text = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
-            Form f = Form1.ActiveForm;
-            new  Form1(this);
-            //ft.Show();
-            //ft =Form1.ActiveForm;
-           //ft.Activate();
-            
-            update.flag=false;
-             
-            new update("ss").BringToFront();
-            
-
+            Form1 form1 = (Form1)this.ParentForm;
+            form1.control(dataGridView1.CurrentRow.Cells["caseNum"].Value.ToString());
+        }
+        public List<Cases> CasesList
+        {
+            get
+            {
+                return dataGridView1.DataSource as List<Cases>;
+            }
         }
     }
 }

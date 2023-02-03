@@ -34,6 +34,8 @@ namespace LowOffice
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -53,6 +55,7 @@ namespace LowOffice
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.filters1 = new LowOffice.filters();
             this.showAll1 = new LowOffice.ShowAll();
             this.update1 = new LowOffice.update();
             this.userControl11 = new LowOffice.Add1();
@@ -60,8 +63,10 @@ namespace LowOffice
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.fiters = new LowOffice.filters();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -99,6 +104,8 @@ namespace LowOffice
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.pictureBox8);
+            this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.pictureBox6);
@@ -117,6 +124,23 @@ namespace LowOffice
             this.panel2.Controls.Add(this.button1);
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
+            // 
+            // pictureBox8
+            // 
+            resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.TabStop = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Gold;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            resources.ApplyResources(this.button9, "button9");
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Name = "button9";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // pictureBox7
             // 
@@ -206,6 +230,7 @@ namespace LowOffice
             // 
             resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // button6
             // 
@@ -277,6 +302,7 @@ namespace LowOffice
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.filters1);
             this.panel4.Controls.Add(this.showAll1);
             this.panel4.Controls.Add(this.update1);
             this.panel4.Controls.Add(this.userControl11);
@@ -284,10 +310,16 @@ namespace LowOffice
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
+            // filters1
+            // 
+            resources.ApplyResources(this.filters1, "filters1");
+            this.filters1.Name = "filters1";
+            // 
             // showAll1
             // 
             resources.ApplyResources(this.showAll1, "showAll1");
             this.showAll1.Name = "showAll1";
+            this.showAll1.Load += new System.EventHandler(this.showAll1_Load);
             // 
             // update1
             // 
@@ -318,6 +350,11 @@ namespace LowOffice
             // 
             this.printDialog1.UseEXDialog = true;
             // 
+            // fiters
+            // 
+            resources.ApplyResources(this.fiters, "fiters");
+            this.fiters.Name = "fiters";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -334,6 +371,7 @@ namespace LowOffice
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -367,7 +405,7 @@ namespace LowOffice
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Panel panel4;
         private Add1 userControl11;
         private System.Windows.Forms.ComboBox comboBox1;
         public ShowAll showAll1;
@@ -380,6 +418,11 @@ namespace LowOffice
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button9;
+        private object new1;
+        private filters fiters;
+        private filters filters1;
     }
 }
 

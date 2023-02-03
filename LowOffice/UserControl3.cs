@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LowOffice.db;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,15 @@ namespace LowOffice
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
+            Form1 form1 = (Form1)this.ParentForm;
+            form1.control(dataGridView1.CurrentRow.Cells["caseNum"].Value.ToString());
+        }
+        public List<Cases> CasesList
+        {
+            get
+            {
+                return dataGridView1.DataSource as List<Cases>;
+            }
         }
     }
 }

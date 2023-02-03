@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
 //using System.Timers;
 namespace LowOffice
 {
@@ -158,6 +159,15 @@ namespace LowOffice
             this.Hide();
            // var t = new Timer();
             
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            CasesContext cases = new CasesContext();
+            cases.Cases.RemoveRange(cases.Cases);
+            //cases.Database.ex
+            cases.SaveChanges();
+            MessageBox.Show("delete date");
         }
     }
 }

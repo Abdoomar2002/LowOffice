@@ -100,16 +100,17 @@
     <value>Segoe UI Black, 28.2pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1607, 25</value>
+    <value>1388, 18</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>248, 62</value>
+    <value>486, 62</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>مكتب محاماه</value>
+    <value>مكتب د/محمد عيد المحامي
+</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -130,7 +131,7 @@
     <value>0, 0</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1902, 106</value>
+    <value>1902, 129</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -146,6 +147,136 @@
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        8aAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 227</value>
+  </data>
+  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 41</value>
+  </data>
+  <data name="pictureBox8.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
+    <value>pictureBox8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 18pt, style=Bold</value>
+  </data>
+  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-2, 216</value>
+  </data>
+  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 65</value>
+  </data>
+  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="button9.Text" xml:space="preserve">
+    <value>بيانات</value>
+  </data>
+  <data name="button9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;button9.Name" xml:space="preserve">
+    <value>button9</value>
+  </data>
+  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -222,7 +353,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 372</value>
+    <value>16, 437</value>
   </data>
   <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 41</value>
@@ -243,7 +374,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="button8.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
@@ -252,7 +383,7 @@
     <value>NoControl</value>
   </data>
   <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-2, 358</value>
+    <value>0, 423</value>
   </data>
   <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 65</value>
@@ -276,7 +407,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -353,7 +484,7 @@
     <value>NoControl</value>
   </data>
   <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 299</value>
+    <value>15, 364</value>
   </data>
   <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 41</value>
@@ -374,7 +505,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="button7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
@@ -383,7 +514,7 @@
     <value>NoControl</value>
   </data>
   <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 287</value>
+    <value>0, 352</value>
   </data>
   <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 65</value>
@@ -392,7 +523,7 @@
     <value>12</value>
   </data>
   <data name="button7.Text" xml:space="preserve">
-    <value>طباعة الشاشة</value>
+    <value>حفظ</value>
   </data>
   <data name="button7.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -407,11 +538,8 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
-  <metadata name="comboBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="comboBox1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -419,16 +547,16 @@
     <value>Segoe UI, 13.8pt</value>
   </data>
   <data name="comboBox1.Items" xml:space="preserve">
-    <value>Id </value>
+    <value>نوع المحكمة</value>
   </data>
   <data name="comboBox1.Items1" xml:space="preserve">
-    <value>رقم القضية</value>
-  </data>
-  <data name="comboBox1.Items2" xml:space="preserve">
     <value>اسم المحكمة</value>
   </data>
+  <data name="comboBox1.Items2" xml:space="preserve">
+    <value>رقم القضية</value>
+  </data>
   <data name="comboBox1.Items3" xml:space="preserve">
-    <value>رقم الدايرة</value>
+    <value>رقم الدائرة</value>
   </data>
   <data name="comboBox1.Items4" xml:space="preserve">
     <value>اسم الخصم</value>
@@ -437,7 +565,7 @@
     <value>صفة البنك</value>
   </data>
   <data name="comboBox1.Items6" xml:space="preserve">
-    <value>تاريخ الجلسة</value>
+    <value>تاريخ الجلسة التالية</value>
   </data>
   <data name="comboBox1.Items7" xml:space="preserve">
     <value>تاريخ الجلسة السابقة</value>
@@ -446,13 +574,13 @@
     <value>قرار الجلسة</value>
   </data>
   <data name="comboBox1.Items9" xml:space="preserve">
-    <value>الجلسة السابقة</value>
+    <value>قرار الجلسة السابقة</value>
   </data>
   <data name="comboBox1.Items10" xml:space="preserve">
     <value>موضوع الدعوي</value>
   </data>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 440</value>
+    <value>1, 544</value>
   </data>
   <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 39</value>
@@ -470,7 +598,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -736,7 +864,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -830,7 +958,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -938,7 +1066,7 @@
 </value>
   </data>
   <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 230</value>
+    <value>15, 295</value>
   </data>
   <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 41</value>
@@ -959,7 +1087,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1110,7 +1238,7 @@
 </value>
   </data>
   <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 553</value>
+    <value>16, 652</value>
   </data>
   <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 41</value>
@@ -1131,7 +1259,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1765,13 +1893,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 16.2pt, style=Bold</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 490</value>
+    <value>1, 589</value>
   </data>
   <data name="textBox1.PlaceholderText" xml:space="preserve">
     <value>كلمة البحث</value>
@@ -1795,13 +1923,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="button6.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 539</value>
+    <value>1, 638</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 65</value>
@@ -1825,13 +1953,13 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 216</value>
+    <value>0, 281</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 65</value>
@@ -1855,7 +1983,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
@@ -1885,7 +2013,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
@@ -1915,7 +2043,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 18pt, style=Bold</value>
@@ -1945,16 +2073,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1629, 106</value>
+    <value>1629, 129</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>273, 927</value>
+    <value>273, 904</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -2028,6 +2156,30 @@
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="filters1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="filters1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, -2</value>
+  </data>
+  <data name="filters1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1629, 839</value>
+  </data>
+  <data name="filters1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;filters1.Name" xml:space="preserve">
+    <value>filters1</value>
+  </data>
+  <data name="&gt;&gt;filters1.Type" xml:space="preserve">
+    <value>LowOffice.filters, LowOffice, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;filters1.Parent" xml:space="preserve">
+    <value>panel4</value>
+  </data>
+  <data name="&gt;&gt;filters1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="showAll1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -2050,7 +2202,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;showAll1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="update1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2074,7 +2226,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;update1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="userControl11.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2098,7 +2250,7 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;userControl11.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="userControl31.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2122,16 +2274,16 @@
     <value>panel4</value>
   </data>
   <data name="&gt;&gt;userControl31.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 106</value>
+    <value>0, 129</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1629, 840</value>
+    <value>1629, 817</value>
   </data>
   <data name="panel4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2201,6 +2353,21 @@
   <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>375, 17</value>
   </metadata>
+  <data name="fiters.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="fiters.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1580, 806</value>
+  </data>
+  <data name="fiters.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;fiters.Name" xml:space="preserve">
+    <value>fiters</value>
+  </data>
+  <data name="&gt;&gt;fiters.Type" xml:space="preserve">
+    <value>LowOffice.filters, LowOffice, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
