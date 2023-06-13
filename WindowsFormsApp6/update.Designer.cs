@@ -1,0 +1,1211 @@
+﻿
+namespace WindowsFormsApp6
+{
+    partial class update
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(update));
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dateOfLast = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.date = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.typeOfHall = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.caseDescision = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.caseNum = new Guna.UI2.WinForms.Guna2TextBox();
+            this.oppenentName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.circleNum = new Guna.UI2.WinForms.Guna2TextBox();
+            this.describtion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lastOne = new Guna.UI2.WinForms.Guna2TextBox();
+            this.attribute = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton2 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Hall = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.law = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.getData = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pdfViewer1 = new PdfiumViewer.PdfViewer();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.back = new Guna.UI2.WinForms.Guna2Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button2.BorderRadius = 5;
+            this.guna2Button2.BorderThickness = 2;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Black;
+            this.guna2Button2.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(645, 707);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(150, 44);
+            this.guna2Button2.TabIndex = 124;
+            this.guna2Button2.Text = "مسح";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 5;
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Black;
+            this.guna2Button1.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(171, 701);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(278, 49);
+            this.guna2Button1.TabIndex = 123;
+            this.guna2Button1.Text = "ترحيل للجلسة القادمة";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2HtmlLabel12
+            // 
+            this.guna2HtmlLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Cairo SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel12.Location = new System.Drawing.Point(1176, 1);
+            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(152, 58);
+            this.guna2HtmlLabel12.TabIndex = 122;
+            this.guna2HtmlLabel12.Text = "قضية تعديل";
+            // 
+            // dateOfLast
+            // 
+            this.dateOfLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateOfLast.BackColor = System.Drawing.Color.White;
+            this.dateOfLast.Checked = true;
+            this.dateOfLast.FillColor = System.Drawing.Color.White;
+            this.dateOfLast.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOfLast.ForeColor = System.Drawing.Color.Black;
+            this.dateOfLast.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateOfLast.Location = new System.Drawing.Point(865, 714);
+            this.dateOfLast.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateOfLast.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateOfLast.Name = "dateOfLast";
+            this.dateOfLast.ShadowDecoration.Enabled = true;
+            this.dateOfLast.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.dateOfLast.Size = new System.Drawing.Size(359, 41);
+            this.dateOfLast.TabIndex = 121;
+            this.dateOfLast.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dateOfLast.Value = new System.DateTime(2023, 2, 14, 18, 34, 9, 40);
+            this.dateOfLast.ValueChanged += new System.EventHandler(this.dateOfLast_ValueChanged);
+            // 
+            // date
+            // 
+            this.date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.date.BackColor = System.Drawing.Color.White;
+            this.date.Checked = true;
+            this.date.FillColor = System.Drawing.Color.White;
+            this.date.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date.ForeColor = System.Drawing.Color.Black;
+            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.date.Location = new System.Drawing.Point(865, 660);
+            this.date.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.date.Name = "date";
+            this.date.ShadowDecoration.Enabled = true;
+            this.date.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.date.Size = new System.Drawing.Size(359, 41);
+            this.date.TabIndex = 120;
+            this.date.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.date.Value = new System.DateTime(2023, 2, 14, 18, 34, 9, 40);
+            // 
+            // typeOfHall
+            // 
+            this.typeOfHall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeOfHall.BackColor = System.Drawing.Color.Transparent;
+            this.typeOfHall.BorderColor = System.Drawing.Color.Black;
+            this.typeOfHall.BorderThickness = 2;
+            this.typeOfHall.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.typeOfHall.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeOfHall.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.typeOfHall.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.typeOfHall.Font = new System.Drawing.Font("Cairo", 12F);
+            this.typeOfHall.ForeColor = System.Drawing.Color.Black;
+            this.typeOfHall.ItemHeight = 35;
+            this.typeOfHall.Items.AddRange(new object[] {
+            "اقتصادي",
+            "استئناف اقتصادي",
+            "مدني جزئي",
+            "مدني كلي",
+            "تجاري",
+            "عمالي",
+            "مدني مستأنف",
+            "استئناف عالي",
+            "قضاء اداري",
+            "جنح",
+            "جنح مستأنف",
+            "لجنة",
+            "خبراء"});
+            this.typeOfHall.Location = new System.Drawing.Point(865, 303);
+            this.typeOfHall.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.typeOfHall.Name = "typeOfHall";
+            this.typeOfHall.ShadowDecoration.Enabled = true;
+            this.typeOfHall.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.typeOfHall.Size = new System.Drawing.Size(359, 41);
+            this.typeOfHall.TabIndex = 118;
+            this.typeOfHall.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // caseDescision
+            // 
+            this.caseDescision.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.caseDescision.BackColor = System.Drawing.Color.Transparent;
+            this.caseDescision.BorderColor = System.Drawing.Color.Black;
+            this.caseDescision.BorderThickness = 2;
+            this.caseDescision.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.caseDescision.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.caseDescision.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.caseDescision.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.caseDescision.Font = new System.Drawing.Font("Cairo", 12F);
+            this.caseDescision.ForeColor = System.Drawing.Color.Black;
+            this.caseDescision.ItemHeight = 35;
+            this.caseDescision.Items.AddRange(new object[] {
+            "",
+            "مؤجلة",
+            "حكم",
+            "شطب"});
+            this.caseDescision.Location = new System.Drawing.Point(53, 266);
+            this.caseDescision.Name = "caseDescision";
+            this.caseDescision.ShadowDecoration.Enabled = true;
+            this.caseDescision.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.caseDescision.Size = new System.Drawing.Size(603, 41);
+            this.caseDescision.TabIndex = 117;
+            // 
+            // caseNum
+            // 
+            this.caseNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.caseNum.BorderColor = System.Drawing.Color.Black;
+            this.caseNum.BorderThickness = 2;
+            this.caseNum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.caseNum.DefaultText = "";
+            this.caseNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.caseNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.caseNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.caseNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.caseNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.caseNum.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caseNum.ForeColor = System.Drawing.Color.Black;
+            this.caseNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.caseNum.Location = new System.Drawing.Point(865, 420);
+            this.caseNum.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.caseNum.Name = "caseNum";
+            this.caseNum.PasswordChar = '\0';
+            this.caseNum.PlaceholderText = "";
+            this.caseNum.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.caseNum.SelectedText = "";
+            this.caseNum.ShadowDecoration.Enabled = true;
+            this.caseNum.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.caseNum.Size = new System.Drawing.Size(359, 49);
+            this.caseNum.TabIndex = 116;
+            // 
+            // oppenentName
+            // 
+            this.oppenentName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.oppenentName.BorderColor = System.Drawing.Color.Black;
+            this.oppenentName.BorderThickness = 2;
+            this.oppenentName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.oppenentName.DefaultText = "";
+            this.oppenentName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.oppenentName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.oppenentName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.oppenentName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.oppenentName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.oppenentName.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oppenentName.ForeColor = System.Drawing.Color.Black;
+            this.oppenentName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.oppenentName.Location = new System.Drawing.Point(865, 70);
+            this.oppenentName.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.oppenentName.Name = "oppenentName";
+            this.oppenentName.PasswordChar = '\0';
+            this.oppenentName.PlaceholderText = "";
+            this.oppenentName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.oppenentName.SelectedText = "";
+            this.oppenentName.ShadowDecoration.Enabled = true;
+            this.oppenentName.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.oppenentName.Size = new System.Drawing.Size(359, 49);
+            this.oppenentName.TabIndex = 115;
+            // 
+            // circleNum
+            // 
+            this.circleNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.circleNum.BorderColor = System.Drawing.Color.Black;
+            this.circleNum.BorderThickness = 2;
+            this.circleNum.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.circleNum.DefaultText = "";
+            this.circleNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.circleNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.circleNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.circleNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.circleNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.circleNum.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circleNum.ForeColor = System.Drawing.Color.Black;
+            this.circleNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.circleNum.Location = new System.Drawing.Point(865, 478);
+            this.circleNum.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.circleNum.Name = "circleNum";
+            this.circleNum.PasswordChar = '\0';
+            this.circleNum.PlaceholderText = "";
+            this.circleNum.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.circleNum.SelectedText = "";
+            this.circleNum.ShadowDecoration.Enabled = true;
+            this.circleNum.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.circleNum.Size = new System.Drawing.Size(359, 49);
+            this.circleNum.TabIndex = 114;
+            // 
+            // describtion
+            // 
+            this.describtion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.describtion.BorderColor = System.Drawing.Color.Black;
+            this.describtion.BorderThickness = 2;
+            this.describtion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.describtion.DefaultText = "";
+            this.describtion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.describtion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.describtion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.describtion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.describtion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.describtion.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.describtion.ForeColor = System.Drawing.Color.Black;
+            this.describtion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.describtion.Location = new System.Drawing.Point(53, 68);
+            this.describtion.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.describtion.Multiline = true;
+            this.describtion.Name = "describtion";
+            this.describtion.PasswordChar = '\0';
+            this.describtion.PlaceholderText = "";
+            this.describtion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.describtion.SelectedText = "";
+            this.describtion.ShadowDecoration.Enabled = true;
+            this.describtion.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.describtion.Size = new System.Drawing.Size(741, 136);
+            this.describtion.TabIndex = 113;
+            // 
+            // lastOne
+            // 
+            this.lastOne.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lastOne.BorderColor = System.Drawing.Color.Black;
+            this.lastOne.BorderThickness = 2;
+            this.lastOne.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lastOne.DefaultText = "";
+            this.lastOne.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lastOne.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.lastOne.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lastOne.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lastOne.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lastOne.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastOne.ForeColor = System.Drawing.Color.Black;
+            this.lastOne.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lastOne.Location = new System.Drawing.Point(53, 361);
+            this.lastOne.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.lastOne.Multiline = true;
+            this.lastOne.Name = "lastOne";
+            this.lastOne.PasswordChar = '\0';
+            this.lastOne.PlaceholderText = "";
+            this.lastOne.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lastOne.SelectedText = "";
+            this.lastOne.ShadowDecoration.Enabled = true;
+            this.lastOne.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.lastOne.Size = new System.Drawing.Size(741, 134);
+            this.lastOne.TabIndex = 112;
+            // 
+            // attribute
+            // 
+            this.attribute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.attribute.BorderColor = System.Drawing.Color.Black;
+            this.attribute.BorderThickness = 2;
+            this.attribute.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.attribute.DefaultText = "";
+            this.attribute.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.attribute.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.attribute.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.attribute.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.attribute.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.attribute.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attribute.ForeColor = System.Drawing.Color.Black;
+            this.attribute.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.attribute.Location = new System.Drawing.Point(865, 241);
+            this.attribute.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.attribute.Name = "attribute";
+            this.attribute.PasswordChar = '\0';
+            this.attribute.PlaceholderText = "";
+            this.attribute.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.attribute.SelectedText = "";
+            this.attribute.ShadowDecoration.Enabled = true;
+            this.attribute.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.attribute.Size = new System.Drawing.Size(359, 49);
+            this.attribute.TabIndex = 111;
+            // 
+            // guna2HtmlLabel11
+            // 
+            this.guna2HtmlLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(595, 313);
+            this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(199, 45);
+            this.guna2HtmlLabel11.TabIndex = 110;
+            this.guna2HtmlLabel11.Text = "السابقة الجلسة قرار";
+            // 
+            // guna2HtmlLabel10
+            // 
+            this.guna2HtmlLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(636, 17);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(158, 45);
+            this.guna2HtmlLabel10.TabIndex = 109;
+            this.guna2HtmlLabel10.Text = "الدعوي موضوع";
+            // 
+            // guna2HtmlLabel9
+            // 
+            this.guna2HtmlLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(680, 262);
+            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(115, 45);
+            this.guna2HtmlLabel9.TabIndex = 108;
+            this.guna2HtmlLabel9.Text = "الجلسة قرار";
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(1332, 357);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(141, 45);
+            this.guna2HtmlLabel8.TabIndex = 107;
+            this.guna2HtmlLabel8.Text = "المحكمة اسم";
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(1359, 415);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(114, 45);
+            this.guna2HtmlLabel7.TabIndex = 106;
+            this.guna2HtmlLabel7.Text = "القضية رقم";
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(1368, 232);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(105, 45);
+            this.guna2HtmlLabel6.TabIndex = 105;
+            this.guna2HtmlLabel6.Text = "البنك صفة";
+            // 
+            // guna2HtmlLabel5
+            // 
+            this.guna2HtmlLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(1290, 656);
+            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(183, 45);
+            this.guna2HtmlLabel5.TabIndex = 104;
+            this.guna2HtmlLabel5.Text = "التالية الجلسة تاريخ";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(1267, 714);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(206, 45);
+            this.guna2HtmlLabel4.TabIndex = 103;
+            this.guna2HtmlLabel4.Text = "السابقة الجلسة تاريخ";
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(1357, 70);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(116, 45);
+            this.guna2HtmlLabel3.TabIndex = 102;
+            this.guna2HtmlLabel3.Text = "الخصم اسم";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(1366, 473);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(107, 45);
+            this.guna2HtmlLabel2.TabIndex = 101;
+            this.guna2HtmlLabel2.Text = "الدائرة رقم";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1342, 290);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(131, 45);
+            this.guna2HtmlLabel1.TabIndex = 100;
+            this.guna2HtmlLabel1.Text = "المحكمة نوع";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button3.BorderRadius = 5;
+            this.guna2Button3.BorderThickness = 2;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button3.Location = new System.Drawing.Point(470, 706);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(150, 44);
+            this.guna2Button3.TabIndex = 125;
+            this.guna2Button3.Text = "حفظ";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(415, 636);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(44, 41);
+            this.guna2ImageButton1.TabIndex = 126;
+            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
+            // 
+            // guna2ImageButton2
+            // 
+            this.guna2ImageButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.guna2ImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton2.Image")));
+            this.guna2ImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton2.ImageRotate = 0F;
+            this.guna2ImageButton2.Location = new System.Drawing.Point(616, 633);
+            this.guna2ImageButton2.Name = "guna2ImageButton2";
+            this.guna2ImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton2.Size = new System.Drawing.Size(40, 44);
+            this.guna2ImageButton2.TabIndex = 127;
+            this.guna2ImageButton2.Click += new System.EventHandler(this.guna2ImageButton2_Click);
+            // 
+            // guna2HtmlLabel13
+            // 
+            this.guna2HtmlLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(506, 636);
+            this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(69, 33);
+            this.guna2HtmlLabel13.TabIndex = 128;
+            this.guna2HtmlLabel13.Text = "الجلسة";
+            // 
+            // guna2HtmlLabel14
+            // 
+            this.guna2HtmlLabel14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(679, 636);
+            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(74, 33);
+            this.guna2HtmlLabel14.TabIndex = 129;
+            this.guna2HtmlLabel14.Text = "السابقة";
+            // 
+            // guna2HtmlLabel15
+            // 
+            this.guna2HtmlLabel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel15.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(340, 636);
+            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
+            this.guna2HtmlLabel15.Size = new System.Drawing.Size(59, 33);
+            this.guna2HtmlLabel15.TabIndex = 130;
+            this.guna2HtmlLabel15.Text = "التالية";
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.BorderRadius = 5;
+            this.guna2Button4.BorderThickness = 2;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.White;
+            this.guna2Button4.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button4.Location = new System.Drawing.Point(53, 14);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(222, 48);
+            this.guna2Button4.TabIndex = 131;
+            this.guna2Button4.Text = "تعديل قضية اخري";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Hall);
+            this.panel3.Controls.Add(this.guna2HtmlLabel22);
+            this.panel3.Controls.Add(this.guna2TextBox5);
+            this.panel3.Controls.Add(this.guna2HtmlLabel21);
+            this.panel3.Controls.Add(this.guna2TextBox4);
+            this.panel3.Controls.Add(this.guna2HtmlLabel20);
+            this.panel3.Controls.Add(this.law);
+            this.panel3.Controls.Add(this.guna2Button6);
+            this.panel3.Controls.Add(this.guna2HtmlLabel19);
+            this.panel3.Controls.Add(this.guna2HtmlLabel18);
+            this.panel3.Controls.Add(this.guna2TextBox3);
+            this.panel3.Controls.Add(this.guna2HtmlLabel17);
+            this.panel3.Controls.Add(this.guna2TextBox2);
+            this.panel3.Controls.Add(this.guna2HtmlLabel16);
+            this.panel3.Controls.Add(this.guna2TextBox1);
+            this.panel3.Controls.Add(this.guna2Button4);
+            this.panel3.Controls.Add(this.oppenentName);
+            this.panel3.Controls.Add(this.guna2HtmlLabel15);
+            this.panel3.Controls.Add(this.guna2HtmlLabel1);
+            this.panel3.Controls.Add(this.guna2HtmlLabel14);
+            this.panel3.Controls.Add(this.guna2HtmlLabel2);
+            this.panel3.Controls.Add(this.guna2HtmlLabel13);
+            this.panel3.Controls.Add(this.guna2HtmlLabel3);
+            this.panel3.Controls.Add(this.guna2ImageButton2);
+            this.panel3.Controls.Add(this.guna2HtmlLabel4);
+            this.panel3.Controls.Add(this.guna2ImageButton1);
+            this.panel3.Controls.Add(this.guna2HtmlLabel5);
+            this.panel3.Controls.Add(this.guna2Button3);
+            this.panel3.Controls.Add(this.guna2HtmlLabel6);
+            this.panel3.Controls.Add(this.guna2Button2);
+            this.panel3.Controls.Add(this.guna2HtmlLabel7);
+            this.panel3.Controls.Add(this.guna2Button1);
+            this.panel3.Controls.Add(this.guna2HtmlLabel8);
+            this.panel3.Controls.Add(this.guna2HtmlLabel12);
+            this.panel3.Controls.Add(this.guna2HtmlLabel9);
+            this.panel3.Controls.Add(this.dateOfLast);
+            this.panel3.Controls.Add(this.guna2HtmlLabel10);
+            this.panel3.Controls.Add(this.date);
+            this.panel3.Controls.Add(this.guna2HtmlLabel11);
+            this.panel3.Controls.Add(this.attribute);
+            this.panel3.Controls.Add(this.typeOfHall);
+            this.panel3.Controls.Add(this.lastOne);
+            this.panel3.Controls.Add(this.caseDescision);
+            this.panel3.Controls.Add(this.describtion);
+            this.panel3.Controls.Add(this.caseNum);
+            this.panel3.Controls.Add(this.circleNum);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1522, 783);
+            this.panel3.TabIndex = 132;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // Hall
+            // 
+            this.Hall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Hall.BorderColor = System.Drawing.Color.Black;
+            this.Hall.BorderThickness = 2;
+            this.Hall.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Hall.DefaultText = "";
+            this.Hall.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Hall.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Hall.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Hall.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Hall.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Hall.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hall.ForeColor = System.Drawing.Color.Black;
+            this.Hall.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Hall.Location = new System.Drawing.Point(865, 361);
+            this.Hall.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.Hall.Name = "Hall";
+            this.Hall.PasswordChar = '\0';
+            this.Hall.PlaceholderText = "";
+            this.Hall.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Hall.SelectedText = "";
+            this.Hall.ShadowDecoration.Enabled = true;
+            this.Hall.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.Hall.Size = new System.Drawing.Size(359, 49);
+            this.Hall.TabIndex = 146;
+            // 
+            // guna2HtmlLabel22
+            // 
+            this.guna2HtmlLabel22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(648, 562);
+            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(146, 45);
+            this.guna2HtmlLabel22.TabIndex = 144;
+            this.guna2HtmlLabel22.Text = "المأمورية اسم";
+            // 
+            // guna2TextBox5
+            // 
+            this.guna2TextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox5.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox5.BorderThickness = 2;
+            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox5.DefaultText = "";
+            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox5.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox5.Location = new System.Drawing.Point(52, 562);
+            this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.guna2TextBox5.Name = "guna2TextBox5";
+            this.guna2TextBox5.PasswordChar = '\0';
+            this.guna2TextBox5.PlaceholderText = "";
+            this.guna2TextBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.guna2TextBox5.SelectedText = "";
+            this.guna2TextBox5.ShadowDecoration.Enabled = true;
+            this.guna2TextBox5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.guna2TextBox5.Size = new System.Drawing.Size(589, 49);
+            this.guna2TextBox5.TabIndex = 145;
+            // 
+            // guna2HtmlLabel21
+            // 
+            this.guna2HtmlLabel21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(1339, 182);
+            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(134, 45);
+            this.guna2HtmlLabel21.TabIndex = 142;
+            this.guna2HtmlLabel21.Text = "3 الخصم اسم";
+            // 
+            // guna2TextBox4
+            // 
+            this.guna2TextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox4.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox4.BorderThickness = 2;
+            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox4.DefaultText = "";
+            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.Location = new System.Drawing.Point(865, 182);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.guna2TextBox4.Name = "guna2TextBox4";
+            this.guna2TextBox4.PasswordChar = '\0';
+            this.guna2TextBox4.PlaceholderText = "";
+            this.guna2TextBox4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.ShadowDecoration.Enabled = true;
+            this.guna2TextBox4.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.guna2TextBox4.Size = new System.Drawing.Size(359, 49);
+            this.guna2TextBox4.TabIndex = 143;
+            // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel20.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel20.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(655, 501);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(139, 45);
+            this.guna2HtmlLabel20.TabIndex = 140;
+            this.guna2HtmlLabel20.Text = "المحامي اسم";
+            // 
+            // law
+            // 
+            this.law.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.law.BorderColor = System.Drawing.Color.Black;
+            this.law.BorderThickness = 2;
+            this.law.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.law.DefaultText = "";
+            this.law.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.law.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.law.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.law.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.law.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.law.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.law.ForeColor = System.Drawing.Color.Black;
+            this.law.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.law.Location = new System.Drawing.Point(51, 501);
+            this.law.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.law.Name = "law";
+            this.law.PasswordChar = '\0';
+            this.law.PlaceholderText = "";
+            this.law.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.law.SelectedText = "";
+            this.law.ShadowDecoration.Enabled = true;
+            this.law.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.law.Size = new System.Drawing.Size(589, 49);
+            this.law.TabIndex = 141;
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Button6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button6.BorderRadius = 5;
+            this.guna2Button6.BorderThickness = 1;
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.Black;
+            this.guna2Button6.Font = new System.Drawing.Font("Cairo Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button6.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.Location = new System.Drawing.Point(452, 211);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(203, 48);
+            this.guna2Button6.TabIndex = 139;
+            this.guna2Button6.Text = "عرض مستندات";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // guna2HtmlLabel19
+            // 
+            this.guna2HtmlLabel19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel19.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(674, 214);
+            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(120, 45);
+            this.guna2HtmlLabel19.TabIndex = 138;
+            this.guna2HtmlLabel19.Text = "الملف عرض";
+            // 
+            // guna2HtmlLabel18
+            // 
+            this.guna2HtmlLabel18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel18.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(1339, 128);
+            this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(134, 45);
+            this.guna2HtmlLabel18.TabIndex = 136;
+            this.guna2HtmlLabel18.Text = "2 الخصم اسم";
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox3.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox3.BorderThickness = 2;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Location = new System.Drawing.Point(865, 128);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.ShadowDecoration.Enabled = true;
+            this.guna2TextBox3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.guna2TextBox3.Size = new System.Drawing.Size(359, 49);
+            this.guna2TextBox3.TabIndex = 137;
+            // 
+            // guna2HtmlLabel17
+            // 
+            this.guna2HtmlLabel17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel17.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel17.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(1420, 531);
+            this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(53, 45);
+            this.guna2HtmlLabel17.TabIndex = 134;
+            this.guna2HtmlLabel17.Text = "الفرع";
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox2.BorderThickness = 2;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.Location = new System.Drawing.Point(865, 536);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.ShadowDecoration.Enabled = true;
+            this.guna2TextBox2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.guna2TextBox2.Size = new System.Drawing.Size(359, 49);
+            this.guna2TextBox2.TabIndex = 135;
+            // 
+            // guna2HtmlLabel16
+            // 
+            this.guna2HtmlLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel16.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(1252, 598);
+            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(221, 45);
+            this.guna2HtmlLabel16.TabIndex = 132;
+            this.guna2HtmlLabel16.Text = "للعميل التعريفي الرقم";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.BorderThickness = 2;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Location = new System.Drawing.Point(865, 594);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Enabled = true;
+            this.guna2TextBox1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.guna2TextBox1.Size = new System.Drawing.Size(359, 49);
+            this.guna2TextBox1.TabIndex = 133;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.guna2Button5);
+            this.panel2.Controls.Add(this.getData);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1522, 783);
+            this.panel2.TabIndex = 133;
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.BorderRadius = 10;
+            this.guna2Button5.BorderThickness = 3;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.White;
+            this.guna2Button5.Font = new System.Drawing.Font("Cairo", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button5.Location = new System.Drawing.Point(541, 428);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(499, 65);
+            this.guna2Button5.TabIndex = 1;
+            this.guna2Button5.Text = "بحث";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
+            // getData
+            // 
+            this.getData.BorderColor = System.Drawing.Color.Black;
+            this.getData.BorderRadius = 10;
+            this.getData.BorderThickness = 3;
+            this.getData.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.getData.DefaultText = "";
+            this.getData.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.getData.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.getData.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.getData.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.getData.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.getData.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getData.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.getData.IconRight = ((System.Drawing.Image)(resources.GetObject("getData.IconRight")));
+            this.getData.IconRightOffset = new System.Drawing.Point(15, 0);
+            this.getData.Location = new System.Drawing.Point(541, 277);
+            this.getData.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.getData.Name = "getData";
+            this.getData.PasswordChar = '\0';
+            this.getData.PlaceholderText = "من فضلك ادخل رقم القضية";
+            this.getData.SelectedText = "";
+            this.getData.Size = new System.Drawing.Size(497, 65);
+            this.getData.TabIndex = 0;
+            this.getData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.getData.KeyDown += new System.Windows.Forms.KeyEventHandler(this.getData_KeyDown);
+            // 
+            // pdfViewer1
+            // 
+            this.pdfViewer1.BackColor = System.Drawing.Color.White;
+            this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 147);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pdfViewer1.Name = "pdfViewer1";
+            this.pdfViewer1.Size = new System.Drawing.Size(1522, 636);
+            this.pdfViewer1.TabIndex = 134;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2Button7);
+            this.guna2Panel1.Controls.Add(this.back);
+            this.guna2Panel1.Controls.Add(this.pdfViewer1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1522, 783);
+            this.guna2Panel1.TabIndex = 135;
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BorderRadius = 10;
+            this.guna2Button7.BorderThickness = 2;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.White;
+            this.guna2Button7.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.Location = new System.Drawing.Point(696, 14);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(158, 45);
+            this.guna2Button7.TabIndex = 136;
+            this.guna2Button7.Text = "تغيير";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
+            // 
+            // back
+            // 
+            this.back.BorderColor = System.Drawing.SystemColors.ButtonFace;
+            this.back.BorderRadius = 10;
+            this.back.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.back.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.back.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.back.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.back.FillColor = System.Drawing.Color.Black;
+            this.back.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.ForeColor = System.Drawing.Color.White;
+            this.back.Location = new System.Drawing.Point(16, 14);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(158, 45);
+            this.back.TabIndex = 135;
+            this.back.Text = "عودة";
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "|*.pdf";
+            // 
+            // update
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.guna2Panel1);
+            this.Name = "update";
+            this.Size = new System.Drawing.Size(1522, 783);
+            this.Load += new System.EventHandler(this.update_Load);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateOfLast;
+        private Guna.UI2.WinForms.Guna2DateTimePicker date;
+        private Guna.UI2.WinForms.Guna2ComboBox typeOfHall;
+        private Guna.UI2.WinForms.Guna2ComboBox caseDescision;
+        private Guna.UI2.WinForms.Guna2TextBox caseNum;
+        private Guna.UI2.WinForms.Guna2TextBox oppenentName;
+        private Guna.UI2.WinForms.Guna2TextBox circleNum;
+        private Guna.UI2.WinForms.Guna2TextBox describtion;
+        private Guna.UI2.WinForms.Guna2TextBox lastOne;
+        private Guna.UI2.WinForms.Guna2TextBox attribute;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2Panel panel2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2TextBox getData;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private PdfiumViewer.PdfViewer pdfViewer1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button back;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
+        private Guna.UI2.WinForms.Guna2TextBox law;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox Hall;
+    }
+}
