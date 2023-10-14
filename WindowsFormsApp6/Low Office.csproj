@@ -302,11 +302,11 @@
     <Compile Include="update.Designer.cs">
       <DependentUpon>update.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="AddCase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="AddCase.Designer.cs">
+      <DependentUpon>AddCase.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl2.cs">
       <SubType>UserControl</SubType>
@@ -353,8 +353,8 @@
     <EmbeddedResource Include="update.resx">
       <DependentUpon>update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="AddCase.resx">
+      <DependentUpon>AddCase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl2.resx">
       <DependentUpon>UserControl2.cs</DependentUpon>

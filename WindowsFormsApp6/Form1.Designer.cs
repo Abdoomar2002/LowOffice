@@ -31,6 +31,7 @@ namespace WindowsFormsApp6
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -42,7 +43,7 @@ namespace WindowsFormsApp6
             this.userControl31 = new WindowsFormsApp6.UserControl3();
             this.userControl21 = new WindowsFormsApp6.UserControl2();
             this.filters1 = new WindowsFormsApp6.filters();
-            this.userControl11 = new WindowsFormsApp6.UserControl1();
+            this.userControl11 = new WindowsFormsApp6.AddCase();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -64,6 +65,7 @@ namespace WindowsFormsApp6
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
@@ -74,6 +76,17 @@ namespace WindowsFormsApp6
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1766, 153);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cairo", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(221, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 37);
+            this.label2.TabIndex = 4;
             // 
             // guna2HtmlLabel1
             // 
@@ -145,6 +158,7 @@ namespace WindowsFormsApp6
             "قرار الجلسة",
             "قرار الجلسة السابقة",
             "موضوع الدعوي",
+            "المبلغ",
             "الرقم التعريفي للعميل",
             "اسم المحامي",
             "اسم المأمورية",
@@ -490,6 +504,7 @@ namespace WindowsFormsApp6
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
@@ -519,13 +534,14 @@ namespace WindowsFormsApp6
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private UserControl1 userControl11;
+        private AddCase userControl11;
         private update update1;
         private filters filters1;
         private notification notification1;
         private UserControl3 userControl31;
         private UserControl2 userControl21;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
         //  private object filters;
     }
 }

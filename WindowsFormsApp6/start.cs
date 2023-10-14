@@ -39,6 +39,14 @@ namespace WindowsFormsApp6
             var  lastest2 = lastest.Where(c => (c.caseDecision == "مؤجلة" || c.caseDecision == "") && c.date < last).ToArray();
             notifyIcon1.ShowBalloonTip(1000, " لديك عدد " + lastest2.Length.ToString() + "من القضايا اللتي لم يتم ترحيلها ", "للمزيد من المعلومات اضغط هنا", ToolTipIcon.Info);
 
+            var lastest4 = context.Cases
+                  .AsEnumerable()
+                  // .Where(c => c.date <= last)
+                 
+                  .OrderByDescending(c => c.date).ToList();
+
+            var lastest3 = lastest4.Where(c => c.caseDecision == "تحت الرفع" ).ToArray();
+            notifyIcon1.ShowBalloonTip(1000, " لديك عدد " + lastest3.Length.ToString() + "من القضايا اللتي لم يتم رفعها ", "للمزيد من المعلومات اضغط هنا", ToolTipIcon.Info);
 
         }
 
@@ -60,7 +68,7 @@ namespace WindowsFormsApp6
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.ExitThread();
         }
 
         private void button1_Click(object sender, EventArgs e)

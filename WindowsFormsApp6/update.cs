@@ -14,7 +14,16 @@ namespace WindowsFormsApp6
 {
     public partial class update : UserControl
     {
-     //   private VScrollBar vScrollBar;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handle = base.CreateParams;
+                handle.ExStyle |= 0x02000000;
+                return handle;
+            }
+        }
+        //   private VScrollBar vScrollBar;
         public static bool b1 = true, b2 = false;
         public string num;
         public int Id;
@@ -62,10 +71,15 @@ namespace WindowsFormsApp6
 
         private void guna2ImageButton2_Click(object sender, EventArgs e)
         {
-
+          //  MessageBox.Show(Casenumber.Text + "/" + caseNum.Text);
+            if (Casenumber.Text + "/" + caseNum.Text == "/" || Casenumber.Text + "/" + caseNum.Text == "")
+            {
+                MessageBox.Show("لا يوجد جلسات سابقة");
+                return;
+            }
             CasesContext context = new CasesContext();
             context.Database.CreateIfNotExists();
-            var uCase = context.Cases.Where(c => c.caseNum == caseNum.Text).ToArray();
+            var uCase = context.Cases.Where(c => c.caseNum == Casenumber.Text+"/"+ caseNum.Text).ToArray();
             uCase = uCase.OrderBy(c => c.date).ToArray();
 
             var cases = uCase;  // context.Cases.FromSqlRaw("select * from Cases where (caseNum='" + newcase.caseNum + "') order by Id asc").ToArray();
@@ -80,7 +94,8 @@ namespace WindowsFormsApp6
                         typeOfHall.Text = cases[item - 1].typeOfHall;
                         date.Value = cases[item - 1].date;
                         dateOfLast.Value = cases[item - 1].dateOflast;
-                        caseNum.Text = cases[item - 1].caseNum;
+                        caseNum.Text = cases[item-1].caseNum.Substring(cases[item-1].caseNum.IndexOf("/")+1);
+                        Casenumber.Text = cases[item-1].caseNum.IndexOf("/")!=-1? cases[item-1].caseNum.Substring(0, cases[item-1].caseNum.IndexOf("/")):"";
                         circleNum.Text = cases[item - 1].circleNum;
                         oppenentName.Text = cases[item - 1].oppenentName;
                         attribute.Text = cases[item - 1].attribute;
@@ -93,7 +108,11 @@ namespace WindowsFormsApp6
                         path = cases[item - 1].file;
                         guna2TextBox4.Text = cases[item - 1].oppenent3;
                         guna2TextBox5.Text = cases[item - 1].location;
-                        break;
+                        price.Text = cases[item - 1].price;
+                        guna2DateTimePicker2.Value = cases[item - 1].arrival;
+                        firstDate.Value = cases[item - 1].FirstDate;
+                        lastprice.Text = cases[item - 1].lastPrice;
+                            break;
                     }
                     else
                     {
@@ -107,10 +126,14 @@ namespace WindowsFormsApp6
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-
+            if (Casenumber.Text + "/" + caseNum.Text == "/"||Casenumber.Text + "/" + caseNum.Text == "") 
+            {
+                MessageBox.Show("لا يوجد جلسات تالية");
+                return;
+            }
             CasesContext context = new CasesContext();
             context.Database.CreateIfNotExists();
-            var uCase = context.Cases.Where(c => c.caseNum == caseNum.Text).OrderBy(c=>c.date).ToArray();
+            var uCase = context.Cases.Where(c => c.caseNum ==Casenumber.Text+"/"+ caseNum.Text).OrderBy(c=>c.date).ToArray();
             var cases = uCase; //context.Cases.FromSqlRaw("select * from Cases where (caseNum='" + newcase.caseNum + "') order by Id asc").ToArray();
             for (int item = 0; item < cases.Length; item++)
             {
@@ -123,7 +146,8 @@ namespace WindowsFormsApp6
                         date.Value = cases[item + 1].date;
                         typeOfHall.Text = cases[item + 1].typeOfHall;
                         dateOfLast.Value = cases[item + 1].dateOflast;
-                        caseNum.Text = cases[item + 1].caseNum;
+                        caseNum.Text = cases[item+1].caseNum.Substring(cases[item+1].caseNum.IndexOf("/")+1);
+                        Casenumber.Text =cases[item+1].caseNum.IndexOf("/") != -1 ? cases[item+1].caseNum.Substring(0, cases[item+1].caseNum.IndexOf("/")):"";
                         circleNum.Text = cases[item + 1].circleNum;
                         oppenentName.Text = cases[item + 1].oppenentName;
                         attribute.Text = cases[item + 1].attribute;
@@ -136,6 +160,10 @@ namespace WindowsFormsApp6
                         path = cases[item + 1].file;
                         guna2TextBox4.Text = cases[item + 1].oppenent3;
                         guna2TextBox5.Text = cases[item + 1].location;
+                        price.Text = cases[item + 1].price;
+                        firstDate.Value = cases[item + 1].FirstDate;
+                        lastprice.Text = cases[item + 1].lastPrice;
+                        guna2DateTimePicker2.Value = cases[item + 1].arrival;
                         break;
                     }
                     else
@@ -149,12 +177,25 @@ namespace WindowsFormsApp6
 
         public void guna2Button1_Click(object sender, EventArgs e)
         {
+            if(caseDescision.Text=="تحت الرفع") 
+            {
+               var ans= MessageBox.Show("هل تقصد حفظ القضية ؟", "", MessageBoxButtons.YesNo);
+                if (ans == DialogResult.Yes) 
+                {
+                    guna2Button3_Click(null, null);
+                    return;
 
+                }
+                else 
+                {
+                    return;
+                }
+            }
             CasesContext context = new CasesContext();
             context.Database.CreateIfNotExists();
 
 
-            string caseNum2 = caseNum.Text;
+            string caseNum2 =Casenumber.Text+"/"+ caseNum.Text;
             string Hall2 = Hall.Text;
             string circleNum2 = circleNum.Text;
             string type = typeOfHall.Text;
@@ -194,7 +235,11 @@ namespace WindowsFormsApp6
                 file=path,
                 nameoflaw=lawer,
                 oppenent3 = opp3,
-                location = location
+                location = location,
+                price=price.Text,
+                FirstDate=firstDate.Value.Date,
+                arrival=guna2DateTimePicker2.Value.Date,
+                lastPrice=lastprice.Text
             };
             context.Cases.Add(newcase);
             context.SaveChanges();
@@ -211,7 +256,7 @@ namespace WindowsFormsApp6
             context.Database.CreateIfNotExists();
 
 
-            string caseNum2 = caseNum.Text;
+            string caseNum2 =Casenumber.Text+"/"+ caseNum.Text;
             string Hall2 = Hall.Text;
             string circleNum2 = circleNum.Text;
             string type = typeOfHall.Text;
@@ -248,10 +293,14 @@ namespace WindowsFormsApp6
                 depart = dept,
                 serial = num,
                 nameofpers = name,
-                file=path,
-                nameoflaw=lawer,
+                file = path,
+                nameoflaw = lawer,
                 oppenent3 = opp3,
-                location = location
+                location = location,
+                FirstDate = firstDate.Value.Date,
+                price=price.Text,
+                arrival=guna2DateTimePicker2.Value.Date,
+                lastPrice=lastprice.Text
             };
             context.Entry(newcase).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
@@ -290,7 +339,7 @@ namespace WindowsFormsApp6
             context.Database.CreateIfNotExists();
 
 
-            string caseNum2 = caseNum.Text;
+            string caseNum2 =Casenumber.Text+"/"+ caseNum.Text;
             string Hall2 = Hall.Text;
             string circleNum2 = circleNum.Text;
             string type = typeOfHall.Text;
@@ -330,38 +379,59 @@ namespace WindowsFormsApp6
                 file=path,
                 nameoflaw=lawer,
                 oppenent3 = opp3,
-                location = location
+                location = location,
+                price=price.Text,
+                FirstDate=firstDate.Value.Date,
+                arrival= guna2DateTimePicker2.Value.Date,
+                lastPrice=lastprice.Text
             };
             var answer = MessageBox.Show("هل انت متأكد", "", buttons: MessageBoxButtons.YesNo);
+          //  MessageBox.Show(answer.ToString());
             if (answer == DialogResult.Yes)
             {
-                var answer2 = MessageBox.Show("هل تريد مسح القضية كاملة؟", "", buttons: MessageBoxButtons.YesNo);
-                if (answer2 == DialogResult.Yes)
+              //  MessageBox.Show(newcase.caseDecision);
+                if (newcase.caseDecision != "تحت الرفع" && newcase.caseDecision != "")
                 {
-                    var cases = context.Cases.Where(c=>c.caseNum== newcase.caseNum ).ToArray();
-                    foreach (var ca in cases)
-                    {
-                        //context.Remove(ca);
-                        context.Cases.Remove(ca);
-                    }
-                    context.SaveChanges();
-                    MessageBox.Show("تم المسح جميع الجلسات بنجاح");
-                    guna2Button4_Click(null, null);
+                    var answer2 = MessageBox.Show("هل تريد مسح القضية كاملة؟", "", buttons: MessageBoxButtons.YesNo);
 
-                }
-                else if (answer2 == DialogResult.No)
-                {
-                    var answer3 = MessageBox.Show("هل تريد مسح هذه الجلسة فقط", "", buttons: MessageBoxButtons.YesNo);
-                    if (answer3 == DialogResult.Yes)
+                    if (answer2 == DialogResult.Yes)
                     {
-                        context.Cases.Remove(newcase);
+                        var cases = context.Cases.Where(c => c.caseNum == newcase.caseNum).ToArray();
+                        foreach (var ca in cases)
+                        {
+                            //context.Remove(ca);
+                            context.Cases.Remove(ca);
+                        }
                         context.SaveChanges();
-                        MessageBox.Show("تم مسح هذه الجلسة فقط بنجاح");
+                        MessageBox.Show("تم المسح جميع الجلسات بنجاح");
                         guna2Button4_Click(null, null);
-                        path = "";
+
+                    }
+                    else if (answer2 == DialogResult.No)
+                    {
+                        var answer3 = MessageBox.Show("هل تريد مسح هذه الجلسة فقط", "", buttons: MessageBoxButtons.YesNo);
+                        if (answer3 == DialogResult.Yes)
+                        {
+                            var removed = context.Cases.Find(newcase.Id);
+                            if (removed != null)
+                                context.Cases.Remove(removed);
+                            context.SaveChanges();
+                            MessageBox.Show("تم مسح هذه الجلسة فقط بنجاح");
+                            guna2Button4_Click(null, null);
+                            path = "";
+                        }
                     }
                 }
-
+                else if(newcase.caseDecision == "تحت الرفع" || newcase.caseDecision == "")
+                {
+                    var removed = context.Cases.Find(newcase.Id);
+                    if (removed != null)
+                        context.Cases.Remove(removed);
+                    context.SaveChanges();
+                    MessageBox.Show("تم مسح هذه الجلسة فقط بنجاح");
+                    guna2Button4_Click(null, null);
+                    path = "";
+                }
 
             }
         }
@@ -392,7 +462,8 @@ namespace WindowsFormsApp6
                     Hall.Text = updCase.Hall;
                     date.Value = updCase.date;
                     dateOfLast.Value = updCase.dateOflast;
-                    caseNum.Text = updCase.caseNum;
+                    caseNum.Text = updCase.caseNum.Substring(updCase.caseNum.IndexOf("/")+1);
+                    Casenumber.Text = updCase.caseNum.IndexOf("/")!=-1? updCase.caseNum.Substring(0, updCase.caseNum.IndexOf("/")):"";
                     circleNum.Text = updCase.circleNum;
                     oppenentName.Text = updCase.oppenentName;
                     attribute.Text = updCase.attribute;
@@ -401,8 +472,14 @@ namespace WindowsFormsApp6
                     guna2TextBox3.Text = updCase.nameofpers;
                     guna2TextBox2.Text = updCase.depart;
                     guna2TextBox1.Text = updCase.serial;
+                    guna2TextBox4.Text = updCase.oppenent3;
+                    guna2TextBox5.Text = updCase.location;
                     path = updCase.file;
                     law.Text = updCase.nameoflaw;
+                    price.Text = updCase.price;
+                    firstDate.Value = updCase.FirstDate;
+                    guna2DateTimePicker2.Value = updCase.arrival;
+                    lastprice.Text = updCase.lastPrice;
                 }
                 else
                 {
@@ -447,13 +524,13 @@ namespace WindowsFormsApp6
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            if (path == null)
+            if (path.Length ==0)
             {
                 var rt = MessageBox.Show("هل تريد اضافة مستند", "لا يوجد مستند لهذه القضية", MessageBoxButtons.YesNo);
                 if (rt == DialogResult.Yes)
                 {
-
-                    pdfViewer1.Document=null;
+                    pdfViewer1.Hide();
+                        //pdfViewer1.Document=null;
                     guna2Panel1.BringToFront();
                 }
                 else
@@ -470,6 +547,7 @@ namespace WindowsFormsApp6
                     var stream = new MemoryStream(bytes);
                     PdfiumViewer.PdfDocument document = PdfiumViewer.PdfDocument.Load(stream);
                     pdfViewer1.Document = document;
+                    pdfViewer1.Show();
                 }
                 else
                 {
@@ -493,6 +571,7 @@ namespace WindowsFormsApp6
                 var stream = new MemoryStream(bytes);
                 PdfiumViewer.PdfDocument document = PdfiumViewer.PdfDocument.Load(stream);
                 pdfViewer1.Document = document;
+                pdfViewer1.Show();
             }
         }
 
@@ -501,22 +580,37 @@ namespace WindowsFormsApp6
             guna2Panel1.SendToBack();
         }
 
-        public void getRowOutside(string number)
+        private void price_TextChanged(object sender, EventArgs e)
         {
-            num = number == "" ? "" : number;
+
+        }
+
+        private void guna2HtmlLabel24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel25_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void getId(int number)
+        {
+            //num = number == -1 ? -1 : number;
             panel2.Visible = b2;
             panel3.Visible = b1;
             panel3.BringToFront();
             CasesContext context = new CasesContext();
             Cases updCase = new Cases();
             // date.MinDate = DateTime.Now;
-            var uCase = context.Cases.Where(c=>c.caseNum==num).ToArray();
+            var uCase = context.Cases.Where(c => c.Id == number).ToArray();
             uCase = uCase.OrderByDescending(c => c.date).ToArray();
 
             if (uCase.Length != 0)
                 updCase = uCase[0];
             if (updCase.Id != 0)
             {
+                // MessageBox.Show(updCase.caseNum.IndexOf("/").ToString());
                 Id = updCase.Id;
                 d = updCase.date;
                 caseDescision.Text = updCase.caseDecision;
@@ -524,7 +618,9 @@ namespace WindowsFormsApp6
                 Hall.Text = updCase.Hall;
                 date.Value = updCase.date;
                 dateOfLast.Value = updCase.dateOflast;
-                caseNum.Text = updCase.caseNum;
+                num = updCase.caseNum;
+                caseNum.Text = updCase.caseNum.Substring(updCase.caseNum.IndexOf("/") + 1);
+                Casenumber.Text = updCase.caseNum.IndexOf("/") != -1 ? updCase.caseNum.Substring(0, updCase.caseNum.IndexOf("/")) : "";
                 circleNum.Text = updCase.circleNum;
                 oppenentName.Text = updCase.oppenentName;
                 attribute.Text = updCase.attribute;
@@ -537,6 +633,60 @@ namespace WindowsFormsApp6
                 law.Text = updCase.nameoflaw;
                 guna2TextBox4.Text = updCase.oppenent3;
                 guna2TextBox5.Text = updCase.location;
+                price.Text = updCase.price;
+                firstDate.Value = updCase.FirstDate;
+                guna2DateTimePicker2.Value = updCase.arrival;
+                lastprice.Text = lastprice.Text;
+
+            }
+            else
+            {
+                guna2Button4_Click(null, null);
+                MessageBox.Show("لا يوجد قضية بهذا الرقم");
+            }
+        }
+        public void getRowOutside(string number)
+        {
+            num = number == "" ? "" : number;
+            panel2.Visible = b2;
+            panel3.Visible = b1;
+            panel3.BringToFront();
+            CasesContext context = new CasesContext();
+            Cases updCase = new Cases();
+            // date.MinDate = DateTime.Now;
+            var uCase = context.Cases.Where(c=>c.caseNum==num).ToArray();
+            uCase = uCase.OrderByDescending(c => c.date).ToArray();
+            
+            if (uCase.Length != 0)
+                updCase = uCase[0];
+            if (updCase.Id != 0)
+            {
+               // MessageBox.Show(updCase.caseNum.IndexOf("/").ToString());
+                Id = updCase.Id;
+                d = updCase.date;
+                caseDescision.Text = updCase.caseDecision;
+                typeOfHall.Text = updCase.typeOfHall;
+                Hall.Text = updCase.Hall;
+                date.Value = updCase.date;
+                dateOfLast.Value = updCase.dateOflast;
+                caseNum.Text = updCase.caseNum.Substring(updCase.caseNum.IndexOf("/")+1);
+                Casenumber.Text =updCase.caseNum.IndexOf("/")!=-1? updCase.caseNum.Substring(0, updCase.caseNum.IndexOf("/")):"";
+                circleNum.Text = updCase.circleNum;
+                oppenentName.Text = updCase.oppenentName;
+                attribute.Text = updCase.attribute;
+                lastOne.Text = updCase.Lastone;
+                describtion.Text = updCase.describtion;
+                guna2TextBox3.Text = updCase.nameofpers;
+                guna2TextBox2.Text = updCase.depart;
+                guna2TextBox1.Text = updCase.serial;
+                path = updCase.file;
+                law.Text = updCase.nameoflaw;
+                guna2TextBox4.Text = updCase.oppenent3;
+                guna2TextBox5.Text = updCase.location;
+                price.Text = updCase.price;
+                firstDate.Value = updCase.FirstDate;
+                guna2DateTimePicker2.Value = updCase.arrival;
+                lastprice.Text = updCase.lastPrice;
 
             }
             else

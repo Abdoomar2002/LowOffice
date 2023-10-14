@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,15 @@ namespace WindowsFormsApp6
             InitializeComponent();
             textBox2.Focus();
         }
-
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handle = base.CreateParams;
+                handle.ExStyle |= 0x02000000;
+                return handle;
+            }
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string filePath = @"systemObservation.bat";
@@ -35,10 +44,16 @@ namespace WindowsFormsApp6
                 // MessageBox.Show(password + " " + password.Length.ToString());
                 if (textBox2.Text == password)
                 {
-
+                    CasesContext context = new CasesContext();
+                 //  context.Database.CreateIfNotExists();
+                   //ImportExcelDataToDatabase("C:/Users/Abdo/Downloads/new.xlsx");
+                  //  Print(context.Cases.ToList());
+                   // context.Database.ExecuteSqlCommand("TRUNCATE TABLE Cases");
+                 //   context.Database.Delete();
+                   // context.SaveChanges();
                     Program.form1.Show();
-                    this.Hide();
-                    Program.ActiveForm = Program.form1;
+                   this.Hide();
+                   Program.ActiveForm = Program.form1;
                     //this.Close();
                     //Application.Run();
                     //ShowDialog(new Form1());
@@ -287,5 +302,123 @@ namespace WindowsFormsApp6
         {
             textBox2.Focus();
         }
+        private void Print(List<Cases> data)
+        {
+            using (SaveFileDialog saveFile = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
+            {
+                if (saveFile.ShowDialog() == DialogResult.OK)
+                {
+                    var fileInfo = new FileInfo(saveFile.FileName);
+                    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+                    using (var pack = new ExcelPackage(fileInfo))
+                    {
+                        ExcelWorksheet xcel = pack.Workbook.Worksheets.Add("Cases");
+
+                        // Set header row
+                        string[] headers = {
+                            "نوع المحكمة", "اسم المحكمة", "رقم القضية", "رقم الدائره", "صفة البنك",
+                            "اسم الخصم", "اسم الخصم2", "اسم الخصم3", "موضوع الدعوي",
+                            "تاريخ الجلسة", "قرار الجلسة", "اسم الفرع", "القرار",
+                            "اسم المحامي", "الملف", "الرقم التعريفي للعميل", "تاريخ الحلسة السابقة",
+                         "اسم الفرع"
+                            // Add more headers here...
+                        };
+
+                        for (int i = 0; i < headers.Length; i++)
+                        {
+                            xcel.Cells[1, i + 1].Value = headers[i];
+                        }
+
+                        // Fill data rows
+                        for (int i = 0; i < data.Count; i++)
+                        {
+                            Cases cases = data[i];
+                            xcel.Cells[i + 2, 1].Value = cases.typeOfHall;
+                            xcel.Cells[i + 2, 2].Value = cases.Hall;
+                            xcel.Cells[i + 2, 3].Value = cases.caseNum;
+                            xcel.Cells[i + 2, 4].Value = cases.circleNum;
+                            xcel.Cells[i + 2, 5].Value = cases.attribute;
+                            xcel.Cells[i + 2, 6].Value = cases.oppenentName;
+                            xcel.Cells[i + 2, 7].Value = cases.nameofpers;
+                            xcel.Cells[i + 2, 8].Value = cases.oppenent3;
+                            xcel.Cells[i + 2, 9].Value = cases.describtion;
+                            xcel.Cells[i + 2, 10].Value = cases.date.ToLongDateString();
+                            xcel.Cells[i + 2, 11].Value = cases.caseDecision;
+                            xcel.Cells[i + 2, 12].Value = cases.depart;
+                            xcel.Cells[i + 2, 13].Value = cases.Lastone;
+                            xcel.Cells[i + 2, 14].Value = cases.nameoflaw;
+                            xcel.Cells[i + 2, 15].Value = cases.file;
+                            xcel.Cells[i + 2, 16].Value = cases.serial;
+                            xcel.Cells[i + 2, 17].Value = cases.dateOflast.ToLongDateString();
+                            xcel.Cells[i + 2, 18].Value = cases.location;
+                            xcel.Cells[i + 2, 19].Value = cases.FirstDate.ToLongDateString();
+                            xcel.Cells[i + 2, 20].Value = cases.price;
+                            xcel.Cells[i + 2, 21].Value = cases.arrival.ToLongDateString();
+
+                            // Add more cell values for additional properties
+                            // Make sure to adjust the column index accordingly
+
+                            // Example: xcel.Cells[i + 2, 19].Value = cases.MyOtherProperty;
+
+                            // Continue to add more cells for other properties
+                        }
+
+                        pack.Save();
+                    }
+                }
+            }
+        }
+        public void ImportExcelDataToDatabase(string filePath)
+            {
+                ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+                using (var package = new ExcelPackage(new FileInfo(filePath)))
+                {
+                    var worksheet = package.Workbook.Worksheets[0];
+
+                    List<Cases> casesList = new List<Cases>();
+
+                    int rowCount = worksheet.Dimension.Rows;
+
+                    for (int row = 2; row <= rowCount; row++) // Starting from row 2 to skip headers
+                    {
+                    Cases cases = new Cases
+                    {
+                        typeOfHall = worksheet.Cells[row, 1].Text,
+                        Hall = worksheet.Cells[row, 2].Text,
+                        caseNum = worksheet.Cells[row, 3].Text,
+                        circleNum = worksheet.Cells[row, 4].Text,
+                        attribute = worksheet.Cells[row, 5].Text,
+                        oppenentName = worksheet.Cells[row, 6].Text,
+                        nameofpers = worksheet.Cells[row, 7].Text,
+                        oppenent3 = worksheet.Cells[row, 8].Text,
+                        describtion = worksheet.Cells[row, 9].Text,
+                        date = DateTime.Parse(worksheet.Cells[row, 10].Text),
+                        caseDecision = worksheet.Cells[row, 11].Text,
+                        depart = worksheet.Cells[row, 12].Text,
+                        Lastone = worksheet.Cells[row, 13].Text,
+                        nameoflaw = worksheet.Cells[row, 14].Text,
+                        file = worksheet.Cells[row, 15].Text,
+                        serial = worksheet.Cells[row, 16].Text,
+                        dateOflast = DateTime.Parse(worksheet.Cells[row, 17].Text),
+                        location = worksheet.Cells[row, 18].Text,
+                        FirstDate = DateTime.Parse(worksheet.Cells[row, 19].Text),
+                        price=worksheet.Cells[row,20].Text,
+                        arrival=DateTime.Parse(worksheet.Cells[row,21].Text),
+                            // Add more properties based on your Excel columns
+                        };
+
+                        casesList.Add(cases);
+                    }
+
+                    using (var context = new CasesContext())
+                    {
+                        context.Cases.AddRange(casesList);
+                        context.SaveChanges();
+                    }
+                }
+            }
+        }
     }
-}
+

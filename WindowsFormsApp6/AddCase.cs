@@ -20,14 +20,23 @@ using ExcelDataReader;
 
 namespace WindowsFormsApp6
 {
-    public partial class UserControl1 : UserControl
+    public partial class AddCase : UserControl
     {
        public string fileCase;
         public string act="p2";
         private static PrivateFontCollection fontCollection = new PrivateFontCollection();
         DateTimePicker dtp = new DateTimePicker();
-        Rectangle rect;
-        public UserControl1()
+        Rectangle rect; 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handle = base.CreateParams;
+                handle.ExStyle |= 0x02000000;
+                return handle;
+            }
+        }
+        public AddCase()
         {
 
             InitializeComponent();
@@ -53,7 +62,7 @@ namespace WindowsFormsApp6
             context.Database.CreateIfNotExists();
 
 
-            string caseNum = Num.Text;
+            string caseNum =guna2TextBox7.Text+"/"+Num.Text;
             string Hall = hall.Text;
             string typeOfHall = type.Text;
             string circleNum = circle.Text;
@@ -92,7 +101,11 @@ namespace WindowsFormsApp6
                 file = fileCase,
                 nameoflaw = lawyer,
                 oppenent3 = opp3,
-                location=location
+                location = location,
+                FirstDate = guna2DateTimePicker1.Value.Date,
+                price = guna2TextBox8.Text,
+                arrival = guna2DateTimePicker2.Value.Date,
+                lastPrice=guna2TextBox9.Text,
                 
 
 
@@ -106,31 +119,37 @@ namespace WindowsFormsApp6
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            type.Text = "";
+            type.SelectedIndex = -1;
+            guna2TextBox8.Text = "";
+            guna2DateTimePicker1.Value = DateTime.Now;
             Num.Text = "";
             hall.Text = "";
             Last.Text = "";
             desc.Text = "";
             attr.Text = "";
-            dateOflast2.Text = "";
-            guna2TextBox5.Text = "";
+            dateOflast2.Value = DateTime.Today;
+            guna2TextBox5.Text = "اسيوط";
             guna2TextBox6.Text = "";
-            date1.Text = "";
-            comboBox1.Text = "";
+            date1.Value = DateTime.Today;
+            guna2DateTimePicker2.Value = DateTime.Today;
+            comboBox1.SelectedIndex = 0;
             oppenent.Text = "";
             circle.Text = "";
             guna2TextBox1.Text = "";
             guna2TextBox2.Text = "";
+            guna2TextBox7.Text = "";
             guna2TextBox3.Text = "";
+            guna2Button4.Text = "اضافة ملف";
             fileCase = "";
-            guna2TextBox4.Text = "";
-            label1.Text = "لم يتم ارفاق اي ملف";
+            guna2TextBox4.Text = "محمد عيد معبد";
+            guna2TextBox9.Text = "";
+           // label1.Text = "لم يتم ارفاق اي ملف";
 
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "مؤجلة")
+            if (comboBox1.Text == "متداول")
             {
                 Last.Visible = true;
                 label11.Visible = true;
@@ -140,6 +159,18 @@ namespace WindowsFormsApp6
             {
                 Last.Visible = true;
                 label11.Text = "قرار القضية ";
+                label11.Visible = true;
+            }
+            else if (comboBox1.Text == "تحت الرفع")
+            {
+                Last.Visible = true;
+                label11.Text = "";
+                label11.Visible = true;
+            }
+            else if (comboBox1.Text == "شطب")
+            {
+                Last.Visible = true;
+                label11.Text = "قرار الجلسة ";
                 label11.Visible = true;
             }
         }
@@ -171,7 +202,9 @@ namespace WindowsFormsApp6
             guna2Button6.Visible = false;
             date1.Value = DateTime.Now.Date;
             dateOflast2.Value = DateTime.Now.Date;
-           
+            guna2DateTimePicker1.Value = DateTime.Now;
+            guna2DateTimePicker2.Value = DateTime.Now;
+
         }
 
 
@@ -271,12 +304,17 @@ namespace WindowsFormsApp6
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
         {
-            
-            if(openFileDialog1.ShowDialog()==DialogResult.OK)
+            if (guna2Button4.Text != "عرض المستندات ")
             {
-                fileCase = openFileDialog1.FileName;
-               label1.Text = "عرض مستندات الدعوي";
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    fileCase = openFileDialog1.FileName;
+                    if (fileCase.Length > 3)
+                        guna2Button4.Text = "عرض المستندات ";
+                    else guna2Button4.Text = "أضافة مستندات";
+                }
             }
+            else label1_Click(null, null);
            
         }
         DataSet result;

@@ -51,7 +51,7 @@ namespace WindowsFormsApp6
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.textBox2);
             this.guna2Panel1.Controls.Add(this.textBox1);
-            this.guna2Panel1.Location = new System.Drawing.Point(817, 199);
+            this.guna2Panel1.Location = new System.Drawing.Point(892, 200);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(455, 585);

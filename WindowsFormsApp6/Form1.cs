@@ -64,13 +64,14 @@ namespace WindowsFormsApp6
         {
             comboBox1.DroppedDown = true;
         }
-
+        //add
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             userControl11.BringToFront();
             activeUser = "add";
+            label2.Text = "";
         }
-
+        //get All
         private void guna2Button5_Click(object sender, EventArgs e)
         {
             userControl21.BringToFront();
@@ -80,20 +81,25 @@ namespace WindowsFormsApp6
             var allCases = context.Cases
                        .AsEnumerable()
                        .GroupBy(c => c.caseNum)
-                       .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault()).OrderByDescending(c => c.date);
+                       .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault()).OrderByDescending(c => c.date).ToList();
+            allCases.AddRange(context.Cases.AsEnumerable().Where(c => c.caseDecision == "تحت الرفع").ToList());
 
-            userControl21.dataGridView1.DataSource = allCases.ToList();
+            userControl21.dataGridView1.DataSource = allCases.OrderByDescending(c=>c.date).ToList();
             userControl21.dataGridView1.Columns[0].Visible = false;
             userControl21.dataGridView1.Columns[3].Visible = false;
             userControl21.dataGridView1.Columns[6].Visible = false;
             userControl21.dataGridView1.Columns[8].Visible = false;
             userControl21.dataGridView1.Columns[12].Visible = false;
-            userControl21.dataGridView1.Columns[11].Visible = false;
+            userControl21.dataGridView1.Columns[13].Visible = false;
+            userControl21.dataGridView1.Columns[17].Visible = false;
+            userControl21.dataGridView1.Columns[18].Visible = false;
+            userControl21.dataGridView1.Columns[22].Visible = false;
             // var Id = context.Cases.FromSqlRaw("select Id from Cases order by Id desc");
             // showAll1.Column1.DataGridView.DataSource = allCases.ToList();
             // allCases = null;
+            label2.Text = " عدد القضايا " + allCases.Count.ToString();
         }
-
+        //enter key for search
         private void guna2TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Enter)
@@ -125,11 +131,10 @@ namespace WindowsFormsApp6
                             c.nameofpers.Contains(searchTerm) ||
                             c.nameoflaw.Contains(searchTerm) ||
                             c.oppenentName.Contains(searchTerm) ||
-                            c.oppenent3.Contains(searchTerm)||
-                            c.location.Contains(searchTerm))
-                            .AsEnumerable()
-                            .GroupBy(c => c.caseNum)
-                            .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                            c.oppenent3.Contains(searchTerm) ||
+                            c.location.Contains(searchTerm) ||
+                            c.price.Contains(searchTerm))
+                           .ToList();
 
                 if (!searchCases3.Any())
                 {
@@ -138,15 +143,27 @@ namespace WindowsFormsApp6
                 }
                 else
                 {
+                    var part1 = searchCases3.AsEnumerable().Where(c=>c.caseDecision!="تحت الرفع")
+                            .GroupBy(c => c.caseNum)
+                            .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault()).ToList();
+                    var part2 = searchCases3.AsEnumerable()
+                            .Where(c=>c.caseDecision=="تحت الرفع").ToList();
+                    searchCases3 = part1;
+                   searchCases3.AddRange(part2);
                     userControl31.dataGridView1.DataSource = searchCases3.OrderByDescending(c => c.date).ToList();
                     userControl31.dataGridView1.Columns[0].Visible = false;
                     userControl31.dataGridView1.Columns[3].Visible = false;
                     userControl31.dataGridView1.Columns[6].Visible = false;
                     userControl31.dataGridView1.Columns[8].Visible = false;
                     userControl31.dataGridView1.Columns[12].Visible = false;
-                    userControl31.dataGridView1.Columns[11].Visible = false;
+                    userControl31.dataGridView1.Columns[13].Visible = false;
+                    userControl31.dataGridView1.Columns[17].Visible = false;
+                    userControl31.dataGridView1.Columns[18].Visible = false;
+                    userControl31.dataGridView1.Columns[22].Visible = false;
 
                     userControl31.BringToFront();
+                    label2.Text = " عدد القضايا " + searchCases3.Count.ToString();
+
                     return;
                 }
             }
@@ -163,9 +180,9 @@ namespace WindowsFormsApp6
     موضوع الدعوي*/
             string search_key = "";
             if (comboBox1.Text == "نوع المحكمة") search_key = "typeOfHall";
-            if (comboBox1.Text == "رقم القضية") search_key = "caseNum";
             if (comboBox1.Text == "اسم المحكمة") search_key = "Hall";
-            if (comboBox1.Text == "رقم الدايرة") search_key = "circleNum";
+            if (comboBox1.Text == "رقم القضية") search_key = "caseNum";
+            if (comboBox1.Text == "رقم الدائرة") search_key = "circleNum";
             if (comboBox1.Text == "اسم الخصم") search_key = "oppenentName";
             if (comboBox1.Text == "صفة البنك") search_key = "attribute";
             if (comboBox1.Text == "تاريخ الجلسة التالية") search_key = "date";
@@ -178,7 +195,8 @@ namespace WindowsFormsApp6
             if (comboBox1.Text == "اسم الخصم2") search_key = "name";
             if (comboBox1.Text == "اسم الخصم3") search_key = "name2";
             if (comboBox1.Text == "اسم المأمورية") search_key = "loc";
-           
+            if (comboBox1.Text == "المبلغ") search_key = "price";
+
 
 
 
@@ -189,7 +207,7 @@ namespace WindowsFormsApp6
             //.GroupBy(c => c.caseNum)
             //.Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
 
-            IEnumerable<Cases> searchCases;
+            var searchCases=context.Cases.ToList();
 
             //  IEnumerable<Cases> searchCases;
             string key = textBox1.Text;
@@ -197,124 +215,79 @@ namespace WindowsFormsApp6
             {
                 case "caseNum":
                     searchCases = context.Cases
-                        .Where(c => c.caseNum.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.caseNum.Contains(key)).ToList();
+
                     break;
                 case "Hall":
                     searchCases = context.Cases
-                        .Where(c => c.Hall.Contains(textBox1.Text))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.Hall.Contains(textBox1.Text)).ToList();
+
                     break;
                 case "circleNum":
                     searchCases = context.Cases
-                        .Where(c => c.circleNum.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.circleNum.Contains(key)).ToList();
                     break;
                 case "oppenentName":
                     searchCases = context.Cases
-                        .Where(c => c.oppenentName.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.oppenentName.Contains(key)).ToList();
                     break;
                 case "attribute":
                     searchCases = context.Cases
-                        .Where(c => c.attribute.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.attribute.Contains(key)).ToList();
                     break;
                 case "law":
                     searchCases = context.Cases
-                        .Where(c => c.nameoflaw.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.nameoflaw.Contains(key)).ToList();
+                    break;
+                case "price":
+                    searchCases = context.Cases
+                        .Where(c => c.price.Contains(key)).ToList();
                     break;
                 case "date":
                     DateTime dateTime;
                     searchCases = context.Cases
-                        .Where(c => DateTime.TryParse(key, out dateTime) && c.date == dateTime)
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => DateTime.TryParse(key, out dateTime) && c.date == dateTime).ToList();
                     break;
                 case "dateOflast":
                     DateTime dateTime2;
                     searchCases = context.Cases
-                        .Where(c => DateTime.TryParse(key, out dateTime2) && c.dateOflast == dateTime2)
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => DateTime.TryParse(key, out dateTime2) && c.dateOflast == dateTime2).ToList();
                     break;
                 case "describtion":
                     searchCases = context.Cases
-                        .Where(c => c.describtion.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.describtion.Contains(key)).ToList();
                     break;
                 case "caseDecision":
                     searchCases = context.Cases
-                        .Where(c => c.caseDecision.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.caseDecision.Contains(key)).ToList();
                     break;
                 case "Lastone":
                     searchCases = context.Cases
-                        .Where( c => c.Lastone.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where( c => c.Lastone.Contains(key)).ToList();
                     break;
                 case "name":
                     searchCases = context.Cases
-                        .Where(c => c.nameofpers.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.nameofpers.Contains(key)).ToList();
                     break;
                 case "name2":
                     searchCases = context.Cases
-                        .Where(c => c.oppenent3.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.oppenent3.Contains(key)).ToList();
                     break;
                 case "loc":
                     searchCases = context.Cases
-                        .Where(c => c.location.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.location.Contains(key)).ToList();
                     break;
                 case "num":
                     searchCases = context.Cases
-                        .Where(c => c.serial.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.serial.Contains(key)).ToList();
                     break;
                 case "dept":
                     searchCases = context.Cases
-                        .Where(c => c.depart.Contains(key))
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.depart.Contains(key)).ToList();
                     break;
                 default:
                     searchCases = context.Cases
-                        .Where(c => c.Id == -1)
-                        .AsEnumerable()
-                        .GroupBy(c => c.caseNum)
-                        .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault());
+                        .Where(c => c.Id == -1).ToList();
                     break;
             }
             // searchCases = searchCases.Count()==0?searchCases :searchCases.ToArray();
@@ -331,28 +304,46 @@ namespace WindowsFormsApp6
             }
             else
             {
+                var part1 = searchCases.AsEnumerable().Where(c => c.caseDecision != "تحت الرفع")
+                            .GroupBy(c => c.caseNum)
+                            .Select(g => g.OrderByDescending(c => c.date).FirstOrDefault()).ToList();
+                var part2 = searchCases.AsEnumerable()
+                        .Where(c => c.caseDecision == "تحت الرفع").ToList();
+                searchCases = part1;
+                searchCases.AddRange(part2);
                 userControl31.dataGridView1.DataSource = searchCases.OrderByDescending(c => c.date).ToList();
                 userControl31.dataGridView1.Columns[0].Visible = false;
                 userControl31.dataGridView1.Columns[3].Visible = false;
                 userControl31.dataGridView1.Columns[6].Visible = false;
                 userControl31.dataGridView1.Columns[8].Visible = false;
-                userControl31.dataGridView1.Columns[11].Visible = false;
+                userControl31.dataGridView1.Columns[13].Visible = false;
                 userControl31.dataGridView1.Columns[12].Visible = false;
+                userControl31.dataGridView1.Columns[17].Visible = false;
+                userControl31.dataGridView1.Columns[18].Visible = false;
+                userControl31.dataGridView1.Columns[22].Visible = false;
+                label2.Text = " عدد القضايا " + searchCases.Count.ToString();
+
                 userControl31.BringToFront();
             }
         }
 
+        //update 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             update1.BringToFront();
             activeUser = "update";
+            label2.Text = "";
+
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             filters1.BringToFront();
             filters1.guna2Button1_Click(null,null);
+            filters1.setCounter();
             activeUser = "data";
+          
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -360,62 +351,21 @@ namespace WindowsFormsApp6
             activeUser = "notifi";
             notification1.BringToFront();
             notification1.notification_Load(null, null);
+            notification1.setCounter();
+
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            
-            using (SaveFileDialog saveFile = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
-            {
-                if (saveFile.ShowDialog() == DialogResult.OK)
-                {
+            CasesContext context = new CasesContext();
+            var c = context.Cases
+                        .AsEnumerable()
+                        .GroupBy(b => b.caseNum)
+                        .Select(g => g.OrderByDescending(b => b.date).FirstOrDefault()).OrderBy(b => b.date).ToList();
 
+            // workbook.SaveAs(saveFile.FileName);
+            Print(c);
 
-                    var fileInfo = new FileInfo(saveFile.FileName);
-                    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
-
-                    using (var pack = new ExcelPackage(fileInfo))
-                    {
-                        ExcelWorksheet xcel = pack.Workbook.Worksheets.Add("Cases");
-                        CasesContext context = new CasesContext();
-                        var c = context.Cases
-                       .AsEnumerable()
-                       .GroupBy(b => b.caseNum)
-                       .Select(g => g.OrderByDescending(b => b.date).FirstOrDefault()).OrderBy(b => b.date).ToArray();
-
-                        // workbook.SaveAs(saveFile.FileName);
-
-                        xcel.Cells[1, 10].Value = "نوع المحكمة";
-                        xcel.Cells[1, 9].Value = "اسم المحكمة";
-                        xcel.Cells[1, 8].Value = "رقم القضية";
-                        xcel.Cells[1, 7].Value = "رقم الدائره";
-                        xcel.Cells[1, 6].Value = "اسم الخصم";
-                        xcel.Cells[1, 5].Value = "صفة البنك";
-                        xcel.Cells[1, 4].Value = "موضوع الدعوي";
-                        xcel.Cells[1, 3].Value = "تاريخ الجلسة التالية"; 
-                        xcel.Cells[1, 2].Value = "قرار الجلسة";
-                        xcel.Cells[1, 1].Value = "الفرع";
-
-
-                        for (int i = 1; i <= c.Length; i++)
-                        {
-                            xcel.Cells[i + 1, 10].Value = c[i - 1].typeOfHall;
-                            xcel.Cells[i + 1, 9].Value = c[i - 1].Hall;
-                            xcel.Cells[i + 1, 8].Value = c[i - 1].caseNum;
-                            xcel.Cells[i + 1, 7].Value = c[i - 1].circleNum;
-                            xcel.Cells[i + 1, 6].Value = c[i - 1].oppenentName;
-                            xcel.Cells[i + 1, 5].Value = c[i - 1].attribute;
-                            xcel.Cells[i + 1, 4].Value = c[i - 1].describtion;
-                            xcel.Cells[i + 1, 3].Value = c[i - 1].date.ToLongDateString();
-                            xcel.Cells[i + 1, 2].Value = c[i - 1].Lastone;
-                            xcel.Cells[i + 1, 1].Value = c[i - 1].depart;
-                   
-
-                        }
-                        pack.Save();
-                    }
-                }
-            };
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
@@ -454,60 +404,81 @@ namespace WindowsFormsApp6
                     break;
             }
         } 
-        private void Print(List<Cases> data)
+    private void Print(List<Cases> data)
         {
             using (SaveFileDialog saveFile = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
             {
                 if (saveFile.ShowDialog() == DialogResult.OK)
                 {
-
-
                     var fileInfo = new FileInfo(saveFile.FileName);
                     ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
 
                     using (var pack = new ExcelPackage(fileInfo))
                     {
                         ExcelWorksheet xcel = pack.Workbook.Worksheets.Add("Cases");
-                        CasesContext context = new CasesContext();
+                        // Set header row
+                        string[] headers = {
+                            "نوع المحكمة",
+                            "محكمة",
+                            "رقم القضية",
+                            "تاريخ ورود الملف",
+                            "تاريخ إقامة الدعوى",
+                            "رقم الدائره",
+                            "صفة البنك",
+                            "اسم الخصم",
+                            "موضوع الدعوي",
+                            "المبلغ المطالب به",
+                            "تاريخ الجلسة",
+                            "القرار",
+                            "المبلغ المقضي به",
+                            "اسم الفرع",
+                            "الرقم التعريفي للعميل",
+                            "اسم المحامي",
+                         "اسم المأمورية"
+                            // Add more headers here...
+                        };
 
-                        // workbook.SaveAs(saveFile.FileName);
-
-                        xcel.Cells[1, 10].Value = "نوع المحكمة";
-                        xcel.Cells[1, 9].Value = "اسم المحكمة";
-                        xcel.Cells[1, 8].Value = "رقم القضية";
-                        xcel.Cells[1, 7].Value = "رقم الدائره";
-                        xcel.Cells[1, 6].Value = "اسم الخصم";
-                        xcel.Cells[1, 5].Value = "صفة البنك";
-                        xcel.Cells[1, 4].Value = "موضوع الدعوي";
-                        xcel.Cells[1, 3].Value = "تاريخ الجلسة التالية";
-                        xcel.Cells[1, 2].Value = "قرار الجلسة";
-                        xcel.Cells[1, 1].Value = "اسم الفرع";
-
-
-                        int i = 1;
-                        foreach (var cases in data)
+                        for (int i = 0; i < headers.Length; i++)
                         {
-
-                            xcel.Cells[i + 1, 10].Value = cases.typeOfHall;
-                            xcel.Cells[i + 1, 9].Value = cases.Hall;
-                            xcel.Cells[i + 1, 8].Value = cases.caseNum;
-                            xcel.Cells[i + 1, 7].Value = cases.circleNum;
-                            xcel.Cells[i + 1, 6].Value = cases.oppenentName;
-                            xcel.Cells[i + 1, 5].Value = cases.attribute;
-                            xcel.Cells[i + 1, 4].Value = cases.describtion;
-                            xcel.Cells[i + 1, 3].Value = cases.date.ToLongDateString();
-                            //xcel.Cells[i + 1, 9].Value = cases.dateOflast.ToLongDateString();
-                            xcel.Cells[i + 1, 2].Value = cases.Lastone;
-                            xcel.Cells[i + 1, 1].Value = cases.depart;
-
-                            i++;
+                            xcel.Cells[1, headers.Length - i].Value = headers[i];
                         }
+
+                        // Fill data rows
+                        for (int i = 0; i < data.Count; i++)
+                        {
+                            Cases cases = data[i];
+                            xcel.Cells[i + 2, 17].Value = cases.typeOfHall;
+                            xcel.Cells[i + 2, 16].Value = cases.Hall;
+                            xcel.Cells[i + 2, 15].Value = cases.caseNum;
+                            xcel.Cells[i + 2, 14].Value = cases.arrival.ToLongDateString();
+                            xcel.Cells[i + 2, 13].Value = cases.FirstDate.ToLongDateString();
+                            xcel.Cells[i + 2, 12].Value = cases.circleNum;
+                            xcel.Cells[i + 2, 11].Value = cases.attribute;
+                            xcel.Cells[i + 2, 10].Value = cases.oppenentName;      
+                            xcel.Cells[i + 2, 9].Value = cases.describtion;
+                            xcel.Cells[i + 2, 8].Value = cases.price;
+                            xcel.Cells[i + 2, 7].Value = cases.date.ToLongDateString();
+                            xcel.Cells[i + 2, 6].Value = cases.Lastone;
+                            xcel.Cells[i + 2, 5].Value = cases.lastPrice;
+                            xcel.Cells[i + 2, 4].Value = cases.depart;
+                            xcel.Cells[i + 2, 3].Value = cases.serial;
+                            xcel.Cells[i + 2, 2].Value = cases.nameoflaw;
+                            xcel.Cells[i + 2, 1].Value = cases.location;
+
+                            // Add more cell values for additional properties
+                            // Make sure to adjust the column index accordingly
+
+                            // Example: xcel.Cells[i + 2, 19].Value = cases.MyOtherProperty;
+
+                            // Continue to add more cells for other properties
+                        }
+
                         pack.Save();
                     }
                 }
-            };
-            MessageBox.Show("تم الحفظ بنجاح");
+            }
         }
+
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
@@ -557,7 +528,15 @@ namespace WindowsFormsApp6
             activeUser = "update";
             //  return update1;*/
         }
+        public void undertest(int num)
+        {
+            update1.getId(num);
+            update1.BringToFront();
+            //showAll1.SendToBack();
+            activeUser = "update";
+            label2.Text = "";
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             using (var context = new CasesContext())
@@ -575,9 +554,8 @@ namespace WindowsFormsApp6
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (Program.flag == true)
-                //this.Hide();
-                Program.ActiveForm.Hide();
+            if(!Program.flag)
+            Application.ExitThread();
             else
             {
                 Program.ActiveForm.Hide();
@@ -607,7 +585,7 @@ namespace WindowsFormsApp6
                     Program.ActiveForm.Hide();
                 else
                 {
-                    this.Hide();
+                    Application.ExitThread();
                 }
             }
             else if(x==DialogResult.No)
@@ -617,7 +595,7 @@ namespace WindowsFormsApp6
                     Program.ActiveForm.Hide();
                 else
                 {
-                    this.Hide();
+                    Application.ExitThread();
                 }
             }
             
