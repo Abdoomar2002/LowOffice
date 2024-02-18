@@ -133,7 +133,7 @@
   <data name="guna2ImageButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        ZwAADmcBj4mCcQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABi7SURBVHhe7d1L
+        ZQAADmUB8HdB+AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABi7SURBVHhe7d1L
         yO/rfRXwRo9JxGDaoIId2BQsTazFiVZQ0DhIIyKKolJvFAdVIYqgQqVORKTNQHSgIijYOhBDNSaK2otQ
         BdFBpaBVohUHRY3GGtN6iU1i2rje5N057zln7b3fy//yfH/PZ8FnsgZn//k9h7O+HMLJl33+858H4IqS
         N8f74k/FX4m/F/8i/nN8Jn4s/lV8X3xXfCB+T7yj/fXgPmoJwHndjPftiH93/K+4KR/qc/FP4o/GL25/
@@ -259,5 +259,8 @@
   </metadata>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1356, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
   </metadata>
 </root>

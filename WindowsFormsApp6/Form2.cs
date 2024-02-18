@@ -45,9 +45,10 @@ namespace WindowsFormsApp6
                 if (textBox2.Text == password)
                 {
                     CasesContext context = new CasesContext();
+                   // context.Database.Delete();
                  //  context.Database.CreateIfNotExists();
-                   //ImportExcelDataToDatabase("C:/Users/Abdo/Downloads/new.xlsx");
-                  //  Print(context.Cases.ToList());
+                   //ImportExcelDataToDatabase("C:/Users/Abdo/Downloads/abd.xlsx");
+                //  Print(context.Cases.ToList());
                    // context.Database.ExecuteSqlCommand("TRUNCATE TABLE Cases");
                  //   context.Database.Delete();
                    // context.SaveChanges();
@@ -355,6 +356,10 @@ namespace WindowsFormsApp6
                             xcel.Cells[i + 2, 19].Value = cases.FirstDate.ToLongDateString();
                             xcel.Cells[i + 2, 20].Value = cases.price;
                             xcel.Cells[i + 2, 21].Value = cases.arrival.ToLongDateString();
+                            xcel.Cells[i + 2, 22].Value = cases.lastPrice;
+                            xcel.Cells[i + 2, 23].Value = cases.notes;
+                            xcel.Cells[i + 2, 24].Value = cases.saving_number;
+                            
 
                             // Add more cell values for additional properties
                             // Make sure to adjust the column index accordingly
@@ -404,8 +409,12 @@ namespace WindowsFormsApp6
                         dateOflast = DateTime.Parse(worksheet.Cells[row, 17].Text),
                         location = worksheet.Cells[row, 18].Text,
                         FirstDate = DateTime.Parse(worksheet.Cells[row, 19].Text),
-                        price=worksheet.Cells[row,20].Text,
-                        arrival=DateTime.Parse(worksheet.Cells[row,21].Text),
+                        price = worksheet.Cells[row, 20].Text,
+                        arrival = DateTime.Parse(worksheet.Cells[row, 21].Text),
+                       lastPrice=worksheet.Cells[row,22].Text,
+                       notes=worksheet.Cells[row,23].Text,
+                       saving_number=worksheet.Cells[row,24].Text,
+                      
                             // Add more properties based on your Excel columns
                         };
 

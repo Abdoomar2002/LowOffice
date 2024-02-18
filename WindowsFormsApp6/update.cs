@@ -31,6 +31,7 @@ namespace WindowsFormsApp6
         public static int outIndex;
         public DateTime d;
         string path = "";
+        List<string> files = new List<string>();
         public update()
         {
             InitializeComponent();
@@ -67,6 +68,13 @@ namespace WindowsFormsApp6
             panel2.BringToFront();
             panel2.Visible = b1;
             getData.Focus();
+
+            if (path.Length < 3)
+            {
+                guna2Button6.Text = "اضافة مستندات";
+            }
+            else guna2Button6.Text = "عرض مستندات";
+
         }
 
         private void guna2ImageButton2_Click(object sender, EventArgs e)
@@ -105,13 +113,17 @@ namespace WindowsFormsApp6
                         guna2TextBox2.Text = cases[item - 1].depart;
                         guna2TextBox1.Text = cases[item - 1].serial;
                         law.Text = cases[item - 1].nameoflaw;
-                        path = cases[item - 1].file;
+                        files = cases[item - 1].file.Split('$').ToList();
+                        path = files[0];
                         guna2TextBox4.Text = cases[item - 1].oppenent3;
                         guna2TextBox5.Text = cases[item - 1].location;
                         price.Text = cases[item - 1].price;
                         guna2DateTimePicker2.Value = cases[item - 1].arrival;
                         firstDate.Value = cases[item - 1].FirstDate;
                         lastprice.Text = cases[item - 1].lastPrice;
+                        guna2TextBox10.Text = cases[item - 1].notes;
+                        guna2TextBox11.Text = cases[item - 1].saving_number;
+                        guna2ComboBox1.Text = cases[item - 1].IsCompleted;
                             break;
                     }
                     else
@@ -119,7 +131,13 @@ namespace WindowsFormsApp6
                         MessageBox.Show("لا يوجد جلسات سابقة");
                         break;
                     }
-               
+
+                if (path.Length < 3)
+                {
+                    guna2Button6.Text = "اضافة مستندات";
+                }
+                else guna2Button6.Text = "عرض مستندات";
+
 
             }
         }
@@ -157,21 +175,36 @@ namespace WindowsFormsApp6
                         guna2TextBox2.Text = cases[item+1].depart;
                         guna2TextBox1.Text = cases[item+1].serial;
                         law.Text = cases[item + 1].nameoflaw;
-                        path = cases[item + 1].file;
+                        files = cases[item + 1].file.Split('$').ToList();
+                        path = files[0];
                         guna2TextBox4.Text = cases[item + 1].oppenent3;
                         guna2TextBox5.Text = cases[item + 1].location;
                         price.Text = cases[item + 1].price;
                         firstDate.Value = cases[item + 1].FirstDate;
                         lastprice.Text = cases[item + 1].lastPrice;
                         guna2DateTimePicker2.Value = cases[item + 1].arrival;
+                        guna2TextBox10.Text = cases[item + 1].notes;
+                        guna2TextBox11.Text = cases[item + 1].saving_number;
+                        guna2ComboBox1.Text = cases[item + 1].IsCompleted;
+
+
                         break;
+
+                      
                     }
                     else
                     {
                         MessageBox.Show("لا يوجد جلسات تالية");
                         break;
                     }
-             
+
+                if (path.Length < 3)
+                {
+                    guna2Button6.Text = "اضافة مستندات";
+                }
+                else guna2Button6.Text = "عرض مستندات";
+
+
             }
         }
 
@@ -232,14 +265,19 @@ namespace WindowsFormsApp6
                 depart = dept,
                 serial = num,
                 nameofpers = name,
-                file=path,
-                nameoflaw=lawer,
+                file = string.Join("$", files),
+                nameoflaw = lawer,
                 oppenent3 = opp3,
                 location = location,
-                price=price.Text,
-                FirstDate=firstDate.Value.Date,
-                arrival=guna2DateTimePicker2.Value.Date,
-                lastPrice=lastprice.Text
+                price = price.Text,
+                FirstDate = firstDate.Value.Date,
+                arrival = guna2DateTimePicker2.Value.Date,
+                lastPrice = lastprice.Text,
+                notes = guna2TextBox10.Text,
+                saving_number = guna2TextBox11.Text,
+                IsCompleted = guna2ComboBox1.Text
+                
+                
             };
             context.Cases.Add(newcase);
             context.SaveChanges();
@@ -293,14 +331,18 @@ namespace WindowsFormsApp6
                 depart = dept,
                 serial = num,
                 nameofpers = name,
-                file = path,
+                file = string.Join("$",files),
                 nameoflaw = lawer,
                 oppenent3 = opp3,
                 location = location,
                 FirstDate = firstDate.Value.Date,
                 price=price.Text,
                 arrival=guna2DateTimePicker2.Value.Date,
-                lastPrice=lastprice.Text
+                lastPrice=lastprice.Text,
+                notes=guna2TextBox10.Text,
+                saving_number=guna2TextBox11.Text,
+                IsCompleted = guna2ComboBox1.Text
+
             };
             context.Entry(newcase).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
@@ -376,14 +418,18 @@ namespace WindowsFormsApp6
                 depart = dept,
                 serial = num,
                 nameofpers = name,
-                file=path,
+                file=string.Join("$", files),
                 nameoflaw=lawer,
                 oppenent3 = opp3,
                 location = location,
                 price=price.Text,
                 FirstDate=firstDate.Value.Date,
                 arrival= guna2DateTimePicker2.Value.Date,
-                lastPrice=lastprice.Text
+                lastPrice=lastprice.Text,
+                notes=guna2TextBox10.Text,
+                saving_number=guna2TextBox11.Text,
+                IsCompleted = guna2ComboBox1.Text
+
             };
             var answer = MessageBox.Show("هل انت متأكد", "", buttons: MessageBoxButtons.YesNo);
           //  MessageBox.Show(answer.ToString());
@@ -474,12 +520,23 @@ namespace WindowsFormsApp6
                     guna2TextBox1.Text = updCase.serial;
                     guna2TextBox4.Text = updCase.oppenent3;
                     guna2TextBox5.Text = updCase.location;
-                    path = updCase.file;
+                    files =updCase.file.Length<3? updCase.file.Split('$').ToList():new List<string>();
+                    path = files.Count > 0 ? files[0] :"";
                     law.Text = updCase.nameoflaw;
                     price.Text = updCase.price;
                     firstDate.Value = updCase.FirstDate;
                     guna2DateTimePicker2.Value = updCase.arrival;
                     lastprice.Text = updCase.lastPrice;
+                    guna2TextBox10.Text = updCase.notes;
+                    guna2TextBox11.Text = updCase.saving_number;
+                    guna2ComboBox1.Text = updCase.IsCompleted;
+
+                    if (path.Length < 3)
+                    {
+                        guna2Button6.Text = "اضافة مستندات";
+                    }
+                    else guna2Button6.Text = "عرض مستندات";
+
                 }
                 else
                 {
@@ -567,17 +624,27 @@ namespace WindowsFormsApp6
             if(openFileDialog1.ShowDialog()==DialogResult.OK)
             {
                 path = openFileDialog1.FileName;
-                byte[] bytes = File.ReadAllBytes(path);
-                var stream = new MemoryStream(bytes);
-                PdfiumViewer.PdfDocument document = PdfiumViewer.PdfDocument.Load(stream);
-                pdfViewer1.Document = document;
-                pdfViewer1.Show();
+                fileShow();
             }
         }
-
+        public void  fileShow()
+        {
+            byte[] bytes = File.ReadAllBytes(path);
+            var stream = new MemoryStream(bytes);
+            PdfiumViewer.PdfDocument document = PdfiumViewer.PdfDocument.Load(stream);
+            pdfViewer1.Document = document;
+            pdfViewer1.Show();
+        }
         private void back_Click(object sender, EventArgs e)
         {
             guna2Panel1.SendToBack();
+
+            if (path.Length < 3)
+            {
+                guna2Button6.Text = "اضافة مستندات";
+            }
+            else guna2Button6.Text = "عرض مستندات";
+
         }
 
         private void price_TextChanged(object sender, EventArgs e)
@@ -629,14 +696,25 @@ namespace WindowsFormsApp6
                 guna2TextBox3.Text = updCase.nameofpers;
                 guna2TextBox2.Text = updCase.depart;
                 guna2TextBox1.Text = updCase.serial;
-                path = updCase.file;
-                law.Text = updCase.nameoflaw;
+                files =updCase.file!=""? updCase.file.Split('$').ToList():new List<string>();
+                path = files.Count > 0 ? files[0] : ""; law.Text = updCase.nameoflaw;
                 guna2TextBox4.Text = updCase.oppenent3;
                 guna2TextBox5.Text = updCase.location;
                 price.Text = updCase.price;
                 firstDate.Value = updCase.FirstDate;
                 guna2DateTimePicker2.Value = updCase.arrival;
-                lastprice.Text = lastprice.Text;
+                lastprice.Text = updCase.lastPrice;
+                guna2TextBox10.Text = updCase.notes;
+                guna2TextBox11.Text = updCase.saving_number;
+                guna2ComboBox1.Text = updCase.IsCompleted;
+
+
+                if (path.Length < 3)
+                {
+                    guna2Button6.Text = "اضافة مستندات";
+                }
+                else guna2Button6.Text = "عرض مستندات";
+
 
             }
             else
@@ -645,6 +723,81 @@ namespace WindowsFormsApp6
                 MessageBox.Show("لا يوجد قضية بهذا الرقم");
             }
         }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            if (files.IndexOf(path) > 0)
+            {
+                path = files[files.IndexOf(path) - 1];
+                fileShow();
+            }
+            else
+            {
+                MessageBox.Show("لا يوجد ملفات اخري ");
+            }
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            if (files.Count - 1 > files.IndexOf(path))
+            {
+                path = files[files.IndexOf(path) + 1];
+                fileShow();
+            }
+            else
+            {
+                MessageBox.Show("لا يوجد ملفات اخري ");
+            }
+        }
+
+        private void guna2Button11_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                files.Add(openFileDialog1.FileName);
+                path = openFileDialog1.FileName;
+                fileShow();
+
+            }
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            var ans = MessageBox.Show("هل تريد مسح الملف", "", MessageBoxButtons.YesNo);
+            if (ans == DialogResult.Yes)
+            {
+
+                if (files.Count == 1)
+                {
+                    files.Remove(path);
+                    guna2Panel1.SendToBack();
+                    path = "";
+
+                    if (path.Length < 3)
+                    {
+                        guna2Button6.Text = "اضافة مستندات";
+                    }
+                    else guna2Button6.Text = "عرض مستندات";
+
+
+                }
+                else if (files.IndexOf(path) != 0)
+                {
+                    var temp = path;
+                    path = files[files.IndexOf(path) - 1];
+                    files.Remove(temp);
+                    fileShow();
+                }
+                else
+                {
+                    var temp = path;
+                    path = files[files.IndexOf(path) + 1];
+                    files.Remove(temp);
+                    fileShow();
+                }
+            }
+        }
+
         public void getRowOutside(string number)
         {
             num = number == "" ? "" : number;
@@ -679,7 +832,8 @@ namespace WindowsFormsApp6
                 guna2TextBox3.Text = updCase.nameofpers;
                 guna2TextBox2.Text = updCase.depart;
                 guna2TextBox1.Text = updCase.serial;
-                path = updCase.file;
+                files =updCase.file!=""? updCase.file.Split('$').ToList():new List<string>();
+                path =files.Count>0? files[0]:"";
                 law.Text = updCase.nameoflaw;
                 guna2TextBox4.Text = updCase.oppenent3;
                 guna2TextBox5.Text = updCase.location;
@@ -687,6 +841,16 @@ namespace WindowsFormsApp6
                 firstDate.Value = updCase.FirstDate;
                 guna2DateTimePicker2.Value = updCase.arrival;
                 lastprice.Text = updCase.lastPrice;
+                guna2TextBox10.Text = updCase.notes;
+                guna2TextBox11.Text = updCase.saving_number;
+                guna2ComboBox1.Text = updCase.IsCompleted;
+
+
+                if (path.Length < 3)
+                {
+                    guna2Button6.Text = "اضافة مستندات";
+                }
+                else guna2Button6.Text = "عرض مستندات";
 
             }
             else

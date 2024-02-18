@@ -1,16 +1,12 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp6.db;
-using System.Linq;
-using OfficeOpenXml;
-using System.IO;
 
 namespace WindowsFormsApp6
 {
@@ -86,14 +82,16 @@ namespace WindowsFormsApp6
 
             userControl21.dataGridView1.DataSource = allCases.OrderByDescending(c=>c.date).ToList();
             userControl21.dataGridView1.Columns[0].Visible = false;
-            userControl21.dataGridView1.Columns[3].Visible = false;
-            userControl21.dataGridView1.Columns[6].Visible = false;
+            userControl21.dataGridView1.Columns[1].Visible = false;
+            userControl21.dataGridView1.Columns[2].Visible = false;
+            userControl21.dataGridView1.Columns[5].Visible = false;
             userControl21.dataGridView1.Columns[8].Visible = false;
-            userControl21.dataGridView1.Columns[12].Visible = false;
-            userControl21.dataGridView1.Columns[13].Visible = false;
-            userControl21.dataGridView1.Columns[17].Visible = false;
-            userControl21.dataGridView1.Columns[18].Visible = false;
-            userControl21.dataGridView1.Columns[22].Visible = false;
+            userControl21.dataGridView1.Columns[10].Visible = false;
+            userControl21.dataGridView1.Columns[14].Visible = false;
+            userControl21.dataGridView1.Columns[15].Visible = false;
+            userControl21.dataGridView1.Columns[19].Visible = false;
+            userControl21.dataGridView1.Columns[20].Visible = false;
+            userControl21.dataGridView1.Columns[24].Visible = false;
             // var Id = context.Cases.FromSqlRaw("select Id from Cases order by Id desc");
             // showAll1.Column1.DataGridView.DataSource = allCases.ToList();
             // allCases = null;
@@ -152,14 +150,16 @@ namespace WindowsFormsApp6
                    searchCases3.AddRange(part2);
                     userControl31.dataGridView1.DataSource = searchCases3.OrderByDescending(c => c.date).ToList();
                     userControl31.dataGridView1.Columns[0].Visible = false;
-                    userControl31.dataGridView1.Columns[3].Visible = false;
-                    userControl31.dataGridView1.Columns[6].Visible = false;
+                    userControl31.dataGridView1.Columns[1].Visible = false;
+                    userControl31.dataGridView1.Columns[2].Visible = false;
+                    userControl31.dataGridView1.Columns[5].Visible = false;
                     userControl31.dataGridView1.Columns[8].Visible = false;
-                    userControl31.dataGridView1.Columns[12].Visible = false;
-                    userControl31.dataGridView1.Columns[13].Visible = false;
-                    userControl31.dataGridView1.Columns[17].Visible = false;
-                    userControl31.dataGridView1.Columns[18].Visible = false;
-                    userControl31.dataGridView1.Columns[22].Visible = false;
+                    userControl31.dataGridView1.Columns[10].Visible = false;
+                    userControl31.dataGridView1.Columns[14].Visible = false;
+                    userControl31.dataGridView1.Columns[15].Visible = false;
+                    userControl31.dataGridView1.Columns[19].Visible = false;
+                    userControl31.dataGridView1.Columns[20].Visible = false;
+                    userControl31.dataGridView1.Columns[24].Visible = false;
 
                     userControl31.BringToFront();
                     label2.Text = " عدد القضايا " + searchCases3.Count.ToString();
@@ -313,14 +313,16 @@ namespace WindowsFormsApp6
                 searchCases.AddRange(part2);
                 userControl31.dataGridView1.DataSource = searchCases.OrderByDescending(c => c.date).ToList();
                 userControl31.dataGridView1.Columns[0].Visible = false;
-                userControl31.dataGridView1.Columns[3].Visible = false;
-                userControl31.dataGridView1.Columns[6].Visible = false;
+                userControl31.dataGridView1.Columns[1].Visible = false;
+                userControl31.dataGridView1.Columns[2].Visible = false;
+                userControl31.dataGridView1.Columns[5].Visible = false;
                 userControl31.dataGridView1.Columns[8].Visible = false;
-                userControl31.dataGridView1.Columns[13].Visible = false;
-                userControl31.dataGridView1.Columns[12].Visible = false;
-                userControl31.dataGridView1.Columns[17].Visible = false;
-                userControl31.dataGridView1.Columns[18].Visible = false;
-                userControl31.dataGridView1.Columns[22].Visible = false;
+                userControl31.dataGridView1.Columns[10].Visible = false;
+                userControl31.dataGridView1.Columns[15].Visible = false;
+                userControl31.dataGridView1.Columns[14].Visible = false;
+                userControl31.dataGridView1.Columns[19].Visible = false;
+                userControl31.dataGridView1.Columns[20].Visible = false;
+                userControl31.dataGridView1.Columns[24].Visible = false;
                 label2.Text = " عدد القضايا " + searchCases.Count.ToString();
 
                 userControl31.BringToFront();
@@ -418,12 +420,9 @@ namespace WindowsFormsApp6
                         ExcelWorksheet xcel = pack.Workbook.Worksheets.Add("Cases");
                         // Set header row
                         string[] headers = {
-                            "نوع المحكمة",
                             "محكمة",
-                            "رقم القضية",
-                            "تاريخ ورود الملف",
-                            "تاريخ إقامة الدعوى",
                             "رقم الدائره",
+                            "رقم القضية",
                             "صفة البنك",
                             "اسم الخصم",
                             "موضوع الدعوي",
@@ -431,10 +430,14 @@ namespace WindowsFormsApp6
                             "تاريخ الجلسة",
                             "القرار",
                             "المبلغ المقضي به",
-                            "اسم الفرع",
-                            "الرقم التعريفي للعميل",
                             "اسم المحامي",
-                         "اسم المأمورية"
+                            "اسم الفرع",
+                            "نوع المحكمة",
+                            "تاريخ ورود الملف",
+                            "تاريخ إقامة الدعوى",
+                            "الرقم التعريفي للعميل",
+                         "اسم المأمورية",
+                       
                             // Add more headers here...
                         };
 
@@ -447,23 +450,25 @@ namespace WindowsFormsApp6
                         for (int i = 0; i < data.Count; i++)
                         {
                             Cases cases = data[i];
-                            xcel.Cells[i + 2, 17].Value = cases.typeOfHall;
-                            xcel.Cells[i + 2, 16].Value = cases.Hall;
+                            xcel.Cells[i + 2, 17].Value = cases.Hall;
+                            xcel.Cells[i + 2, 16].Value = cases.circleNum;
                             xcel.Cells[i + 2, 15].Value = cases.caseNum;
-                            xcel.Cells[i + 2, 14].Value = cases.arrival.ToLongDateString();
-                            xcel.Cells[i + 2, 13].Value = cases.FirstDate.ToLongDateString();
-                            xcel.Cells[i + 2, 12].Value = cases.circleNum;
-                            xcel.Cells[i + 2, 11].Value = cases.attribute;
-                            xcel.Cells[i + 2, 10].Value = cases.oppenentName;      
-                            xcel.Cells[i + 2, 9].Value = cases.describtion;
-                            xcel.Cells[i + 2, 8].Value = cases.price;
-                            xcel.Cells[i + 2, 7].Value = cases.date.ToLongDateString();
-                            xcel.Cells[i + 2, 6].Value = cases.Lastone;
-                            xcel.Cells[i + 2, 5].Value = cases.lastPrice;
-                            xcel.Cells[i + 2, 4].Value = cases.depart;
-                            xcel.Cells[i + 2, 3].Value = cases.serial;
-                            xcel.Cells[i + 2, 2].Value = cases.nameoflaw;
+                            xcel.Cells[i + 2, 14].Value = cases.attribute;
+                            xcel.Cells[i + 2, 13].Value = cases.oppenentName;      
+                            xcel.Cells[i + 2, 12].Value = cases.describtion;
+                            xcel.Cells[i + 2, 11].Value = cases.price;
+                            xcel.Cells[i + 2, 10].Value = cases.date.ToLongDateString();
+                            xcel.Cells[i + 2, 9].Value = cases.Lastone;
+                            xcel.Cells[i + 2, 8].Value = cases.lastPrice;
+                            xcel.Cells[i + 2, 7].Value = cases.nameoflaw;
+                            xcel.Cells[i + 2, 6].Value = cases.depart;
+                            xcel.Cells[i + 2, 5].Value = cases.typeOfHall;
+                            xcel.Cells[i + 2, 4].Value = cases.arrival.ToLongDateString();
+                            xcel.Cells[i + 2, 3].Value = cases.FirstDate.ToLongDateString();
+                            xcel.Cells[i + 2, 2].Value = cases.serial;
                             xcel.Cells[i + 2, 1].Value = cases.location;
+                           
+                            
 
                             // Add more cell values for additional properties
                             // Make sure to adjust the column index accordingly

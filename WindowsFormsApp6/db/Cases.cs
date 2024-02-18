@@ -10,6 +10,10 @@ namespace WindowsFormsApp6.db
     public class Cases
     {//0 false
      public int Id { get; set; }
+        [DisplayName("رقم الحفظ")]
+        public string saving_number { get; set; }
+        [DisplayName("الملاحظات")]
+        public string notes { get; set; }
         [DisplayName("اسم المامورية")]
 
      //1 true
@@ -19,7 +23,7 @@ namespace WindowsFormsApp6.db
         public string nameoflaw { get; set; }
         [DisplayName("ملفات")]
         //3 false
-        public string file { get; set; }
+        public string file{ get; set; }   
         [DisplayName(" الرقم التعريفي للعميل")]
         //4 true
         public string serial { get; set; }
@@ -76,6 +80,8 @@ namespace WindowsFormsApp6.db
         public string typeOfHall { get; set; }
         [DisplayName("المبلغ المقضي به")]
         public string lastPrice { get; set; }
+        [Browsable(false)]
+        public string IsCompleted { get; set; }
       //  0 3 6 8 12 13
     }
 }

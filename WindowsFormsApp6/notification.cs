@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp6.db;
 
@@ -43,11 +39,12 @@ namespace WindowsFormsApp6
         {
             get
             {
-               if(active==3)
-                return dataGridView3.DataSource as List<Cases>;
-               else if(active==2)
+                if (active == 3)
+                    return dataGridView3.DataSource as List<Cases>;
+                else if (active == 2)
                     return dataGridView2.DataSource as List<Cases>;
-                else return dataGridView1.DataSource as List<Cases>;
+                else if (active == 1) return dataGridView1.DataSource as List<Cases>;
+                else return dataGridView4.DataSource as List<Cases>;
 
             }
         }
@@ -65,14 +62,16 @@ namespace WindowsFormsApp6
                    .OrderByDescending(c => c.date).ToArray();
             dataGridView1.DataSource = filteredCases.ToList();
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[8].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
-            dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[17].Visible = false;
-            dataGridView1.Columns[18].Visible = false;
-            dataGridView1.Columns[22].Visible = false;
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
+            dataGridView1.Columns[15].Visible = false;
+            dataGridView1.Columns[19].Visible = false;
+            dataGridView1.Columns[20].Visible = false;
+            dataGridView1.Columns[24].Visible = false;
             DateTime last = DateTime.Today;
             var lastest= context.Cases
                    .AsEnumerable()
@@ -84,25 +83,42 @@ namespace WindowsFormsApp6
             lastest = lastest.Where(c =>(c.caseDecision == "مؤجلة" || c.caseDecision == ""|| c.caseDecision == "متداول") && c.caseDecision!="تحت الرفع"&&c.date<=last).ToList();
             dataGridView3.DataSource = lastest.ToList();
             dataGridView3.Columns[0].Visible = false;
-            dataGridView3.Columns[3].Visible = false;
-            dataGridView3.Columns[6].Visible = false;
+            dataGridView3.Columns[1].Visible = false;
+            dataGridView3.Columns[2].Visible = false;
+            dataGridView3.Columns[5].Visible = false;
             dataGridView3.Columns[8].Visible = false;
-            dataGridView3.Columns[12].Visible = false;
-            dataGridView3.Columns[13].Visible = false;
-            dataGridView3.Columns[17].Visible = false;
-            dataGridView3.Columns[18].Visible = false;
-            dataGridView3.Columns[22].Visible = false;
+            dataGridView3.Columns[10].Visible = false;
+            dataGridView3.Columns[14].Visible = false;
+            dataGridView3.Columns[15].Visible = false;
+            dataGridView3.Columns[19].Visible = false;
+            dataGridView3.Columns[20].Visible = false;
+            dataGridView3.Columns[24].Visible = false;
             underTest = context.Cases.AsEnumerable().Where(c => c.caseDecision == "تحت الرفع").OrderByDescending(c => c.date).ToList();
             dataGridView2.DataSource = underTest.ToList();
             dataGridView2.Columns[0].Visible = false;
-            dataGridView2.Columns[3].Visible = false;
-            dataGridView2.Columns[6].Visible = false;
+            dataGridView2.Columns[1].Visible = false;
+            dataGridView2.Columns[2].Visible = false;
+            dataGridView2.Columns[5].Visible = false;
             dataGridView2.Columns[8].Visible = false;
-            dataGridView2.Columns[12].Visible = false;
-            dataGridView2.Columns[13].Visible = false;
-            dataGridView2.Columns[17].Visible = false;
-            dataGridView2.Columns[18].Visible = false;
-            dataGridView2.Columns[22].Visible = false;
+            dataGridView2.Columns[10].Visible = false;
+            dataGridView2.Columns[14].Visible = false;
+            dataGridView2.Columns[15].Visible = false;
+            dataGridView2.Columns[19].Visible = false;
+            dataGridView2.Columns[20].Visible = false;
+            dataGridView2.Columns[24].Visible = false;
+            var savedCases = context.Cases.AsEnumerable().Where(c => c.caseDecision == "حفظ").OrderByDescending(c => c.date).ToList();
+            dataGridView4.DataSource = savedCases.ToList();
+            dataGridView4.Columns[0].Visible = false;
+            dataGridView4.Columns[1].Visible = false;
+            dataGridView4.Columns[2].Visible = false;
+            dataGridView4.Columns[5].Visible = false;
+            dataGridView4.Columns[8].Visible = false;
+            dataGridView4.Columns[10].Visible = false;
+            dataGridView4.Columns[14].Visible = false;
+            dataGridView4.Columns[15].Visible = false;
+            dataGridView4.Columns[19].Visible = false;
+            dataGridView4.Columns[20].Visible = false;
+            dataGridView4.Columns[24].Visible = false;
             setCounter();
 
         }
@@ -165,6 +181,26 @@ namespace WindowsFormsApp6
                 form1.label2.Text = " عدد القضايا " + dataGridView2.RowCount.ToString(); 
             if (active == 1)
                 form1.label2.Text = " عدد القضايا " + dataGridView1.RowCount.ToString();
+            if(active==4)form1.label2.Text= " عدد القضايا " + dataGridView4.RowCount.ToString();
+
+        }
+
+        private void dataGridView4_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView4.CurrentRow == null || e.RowIndex == -1)
+            {
+                return;
+            }
+            Form1 form1 = (Form1)this.ParentForm;
+            int arg = dataGridView4.CurrentRow.Cells["Id"].Value.ToString() != (-1).ToString() ? Convert.ToInt32(dataGridView4.CurrentRow.Cells["Id"].Value) : -1;
+            form1.undertest(arg);
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            panel8.BringToFront();
+            active = 4;
+            setCounter();
         }
     }
 }

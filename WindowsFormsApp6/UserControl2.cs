@@ -43,14 +43,16 @@ namespace WindowsFormsApp6
             
             dataGridView1.DataSource = allCases.OrderBy(c => c.date).ToList();
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[8].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
-            dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[17].Visible = false;
-            dataGridView1.Columns[18].Visible = false;
-            dataGridView1.Columns[22].Visible = false;
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
+            dataGridView1.Columns[15].Visible = false;
+            dataGridView1.Columns[19].Visible = false;
+            dataGridView1.Columns[20].Visible = false;
+            dataGridView1.Columns[24].Visible = false;
 
         }
 

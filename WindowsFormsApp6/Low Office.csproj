@@ -56,10 +56,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>4D0A86DCB98A4736AF6891C1CB841BAB888AAAC5</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3D0A7B8E6A3D7A9795F0395A0FF8B62F05967636</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>WindowsFormsApp6_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Low Office_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -365,6 +365,7 @@
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
+    <None Include="Low Office_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\WindowsFormsApp6.db.Cases.datasource" />
     <None Include="Properties\DataSources\WindowsFormsApp6.db.CasesContext.datasource" />

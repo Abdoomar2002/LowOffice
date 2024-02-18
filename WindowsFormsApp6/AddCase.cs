@@ -21,8 +21,9 @@ using ExcelDataReader;
 namespace WindowsFormsApp6
 {
     public partial class AddCase : UserControl
-    {
-       public string fileCase;
+    { public List<string> files=new List<string>() ;
+        public string activeIndex = "";
+       public string fileCase="";
         public string act="p2";
         private static PrivateFontCollection fontCollection = new PrivateFontCollection();
         DateTimePicker dtp = new DateTimePicker();
@@ -98,14 +99,16 @@ namespace WindowsFormsApp6
                 depart = dept,
                 nameofpers = nameOf,
                 serial = num,
-                file = fileCase,
+                file = string.Join("$", files),
                 nameoflaw = lawyer,
                 oppenent3 = opp3,
                 location = location,
                 FirstDate = guna2DateTimePicker1.Value.Date,
                 price = guna2TextBox8.Text,
                 arrival = guna2DateTimePicker2.Value.Date,
-                lastPrice=guna2TextBox9.Text,
+                lastPrice = guna2TextBox9.Text,
+                notes = guna2TextBox10.Text,
+                saving_number=guna2TextBox11.Text
                 
 
 
@@ -140,9 +143,13 @@ namespace WindowsFormsApp6
             guna2TextBox7.Text = "";
             guna2TextBox3.Text = "";
             guna2Button4.Text = "اضافة ملف";
-            fileCase = "";
+            files.Clear();
+            activeIndex = "";
             guna2TextBox4.Text = "محمد عيد معبد";
             guna2TextBox9.Text = "";
+            guna2TextBox10.Text = "";
+            guna2TextBox11.Text = "";
+          
            // label1.Text = "لم يتم ارفاق اي ملف";
 
         }
@@ -173,6 +180,12 @@ namespace WindowsFormsApp6
                 label11.Text = "قرار الجلسة ";
                 label11.Visible = true;
             }
+            else if(comboBox1.Text =="حفظ")
+            {
+                Last.Visible= true;
+                label11.Text = "";
+                label11.Visible = true;
+            }
         }
         public List<Cases> printCase()
         {
@@ -200,6 +213,10 @@ namespace WindowsFormsApp6
             label11.Visible = false;
             pdfViewer1.Visible = false;
             guna2Button6.Visible = false;
+            guna2Button7.Visible = false;
+            guna2Button8.Visible = false;
+            guna2Button9.Visible = false;
+            guna2Button10.Visible = false;
             date1.Value = DateTime.Now.Date;
             dateOflast2.Value = DateTime.Now.Date;
             guna2DateTimePicker1.Value = DateTime.Now;
@@ -294,6 +311,7 @@ namespace WindowsFormsApp6
             }
             context.SaveChanges();
             dataGridView1.Rows.Clear();
+            
 
         }
 
@@ -308,8 +326,9 @@ namespace WindowsFormsApp6
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    fileCase = openFileDialog1.FileName;
-                    if (fileCase.Length > 3)
+                    files.Add(openFileDialog1.FileName);
+                    activeIndex = openFileDialog1.FileName;
+                    if (activeIndex.Length > 3)
                         guna2Button4.Text = "عرض المستندات ";
                     else guna2Button4.Text = "أضافة مستندات";
                 }
@@ -359,9 +378,14 @@ namespace WindowsFormsApp6
         private void label1_Click(object sender, EventArgs e)
         {
             guna2Button6.Visible = true;
+            guna2Button7.Visible =true;
+            guna2Button8.Visible =true;
+            guna2Button9.Visible =true;
+            guna2Button10.Visible =true;
+
             pdfViewer1.BringToFront();
             pdfViewer1.Visible = true;
-            byte[] bytes = File.ReadAllBytes(fileCase);
+            byte[] bytes = File.ReadAllBytes(activeIndex);
             var stream = new MemoryStream(bytes);
             PdfiumViewer.PdfDocument document = PdfiumViewer.PdfDocument.Load(stream);
             pdfViewer1.Document = document;
@@ -371,6 +395,10 @@ namespace WindowsFormsApp6
         {
             pdfViewer1.Visible = false;
             guna2Button6.Visible = false;
+            guna2Button7.Visible = false;
+            guna2Button8.Visible = false;
+            guna2Button9.Visible = false;
+            guna2Button10.Visible = false;
         }
         public void save()
         {
@@ -386,6 +414,72 @@ namespace WindowsFormsApp6
                     break;
             }
 
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                files.Add(openFileDialog1.FileName);
+                activeIndex = openFileDialog1.FileName;
+                label1_Click(null, null);
+               
+            }
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+           var ans= MessageBox.Show("هل تريد مسح الملف", "", MessageBoxButtons.YesNo);
+            if (ans == DialogResult.Yes) 
+            {
+                
+                if (files.Count == 1)
+                {
+                    files.Remove(activeIndex);
+                    guna2Button4.Text = "أضافة مستندات";
+                    guna2Button6_Click(null, null);
+                }
+                else if(files.IndexOf(activeIndex)!=0)
+                {
+                    var temp = activeIndex;
+                    activeIndex = files[files.IndexOf(activeIndex) - 1];
+                    files.Remove(temp);
+                    label1_Click(null, null);
+                }
+                else 
+                {
+                    var temp = activeIndex;
+                    activeIndex = files[files.IndexOf(activeIndex) + 1];
+                    files.Remove(temp);
+                    label1_Click(null, null);
+                }
+            }
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            if (files.Count - 1 > files.IndexOf(activeIndex))
+            {
+                activeIndex = files[files.IndexOf(activeIndex) + 1];
+                label1_Click(null, null);
+            }
+            else
+            {
+                MessageBox.Show("لا يوجد ملفات اخري ");
+            }
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            if (files.IndexOf(activeIndex) > 0)
+            {
+                activeIndex = files[files.IndexOf(activeIndex) - 1];
+                label1_Click(null, null);
+            }
+            else
+            {
+                MessageBox.Show("لا يوجد ملفات اخري ");
+            }
         }
     }
 }

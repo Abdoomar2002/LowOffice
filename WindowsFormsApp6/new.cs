@@ -87,11 +87,11 @@ namespace WindowsFormsApp6
                       dataGridView1.DataSource = filteredCases.Where(c => c.date >= dateX && c.date <= dateY).ToList();
 
                   }*/
-            if (checkBox1.Checked || checkBox2.Checked || checkBox3.Checked || checkBox4.Checked)
+            if (checkBox1.Checked || checkBox2.Checked || checkBox3.Checked || checkBox4.Checked||checkBox5.Checked)
             {
                 var filteredList = filteredCases.Where(c =>
                     (checkBox1.Checked && (c.caseDecision == "مؤجلة" || c.caseDecision == "متداول") && c.date >= dateX && c.date <= dateY) ||
-                    (checkBox2.Checked && c.caseDecision == "حكم" && c.date >= dateX && c.date <= dateY) ||
+                    (checkBox2.Checked && c.caseDecision == "حكم" && c.date >= dateX && c.date <= dateY) || (checkBox5.Checked && c.caseDecision == "حفظ" && c.date >= dateX && c.date <= dateY) ||
                     (checkBox3.Checked && (c.caseDecision == "شطب" || c.caseDecision == "مسدد") && c.date >= dateX && c.date <= dateY)).ToList();
                    // (checkBox4.Checked && c.caseDecision == "تحت الرفع" && c.date >= dateX && c.date <= dateY)).ToList();
                 if (checkBox4.Checked) filteredList.AddRange(context.Cases.AsEnumerable().Where(c => c.caseDecision == "تحت الرفع" && c.date >= dateX && c.date <= dateY).ToList());
@@ -111,14 +111,16 @@ namespace WindowsFormsApp6
 
             // MessageBox.Show(filteredCases.ToArray()[0].caseNum);
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[3].Visible = false;
-            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[8].Visible = false;
-            dataGridView1.Columns[12].Visible = false;
-            dataGridView1.Columns[13].Visible = false;
-            dataGridView1.Columns[17].Visible = false;
-            dataGridView1.Columns[18].Visible = false;
-            dataGridView1.Columns[22].Visible = false;
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[14].Visible = false;
+            dataGridView1.Columns[15].Visible = false;
+            dataGridView1.Columns[19].Visible = false;
+            dataGridView1.Columns[20].Visible = false;
+            dataGridView1.Columns[24].Visible = false;
             setCounter();
          
 
