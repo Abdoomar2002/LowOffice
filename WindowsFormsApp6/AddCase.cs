@@ -59,6 +59,7 @@ namespace WindowsFormsApp6
 
         public void guna2Button1_Click(object sender, EventArgs e)
         {
+            if (comboBox1.Text == "حفظ" && guna2TextBox11.Text.Length < 1) { MessageBox.Show("اضف رقم الحفظ"); return; }
             CasesContext context = new CasesContext();
             context.Database.CreateIfNotExists();
 

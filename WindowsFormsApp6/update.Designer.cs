@@ -362,7 +362,7 @@ namespace WindowsFormsApp6
             this.describtion.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.describtion.ForeColor = System.Drawing.Color.Black;
             this.describtion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.describtion.Location = new System.Drawing.Point(253, 76);
+            this.describtion.Location = new System.Drawing.Point(192, 76);
             this.describtion.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.describtion.Multiline = true;
             this.describtion.Name = "describtion";
@@ -372,7 +372,7 @@ namespace WindowsFormsApp6
             this.describtion.SelectedText = "";
             this.describtion.ShadowDecoration.Enabled = true;
             this.describtion.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.describtion.Size = new System.Drawing.Size(639, 126);
+            this.describtion.Size = new System.Drawing.Size(700, 126);
             this.describtion.TabIndex = 13;
             // 
             // lastOne
@@ -767,7 +767,7 @@ namespace WindowsFormsApp6
             this.guna2TextBox11.Font = new System.Drawing.Font("Cairo SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox11.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox11.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox11.Location = new System.Drawing.Point(23, 602);
+            this.guna2TextBox11.Location = new System.Drawing.Point(192, 602);
             this.guna2TextBox11.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBox11.Name = "guna2TextBox11";
             this.guna2TextBox11.PasswordChar = '\0';
@@ -776,7 +776,7 @@ namespace WindowsFormsApp6
             this.guna2TextBox11.SelectedText = "";
             this.guna2TextBox11.ShadowDecoration.Enabled = true;
             this.guna2TextBox11.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.guna2TextBox11.Size = new System.Drawing.Size(213, 48);
+            this.guna2TextBox11.Size = new System.Drawing.Size(277, 48);
             this.guna2TextBox11.TabIndex = 171;
             // 
             // guna2HtmlLabel27
@@ -786,7 +786,7 @@ namespace WindowsFormsApp6
             this.guna2HtmlLabel27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel27.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(132, 540);
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(350, 544);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
             this.guna2HtmlLabel27.Size = new System.Drawing.Size(107, 45);
             this.guna2HtmlLabel27.TabIndex = 172;
@@ -807,7 +807,7 @@ namespace WindowsFormsApp6
             this.guna2TextBox10.Font = new System.Drawing.Font("Cairo SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox10.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox10.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox10.Location = new System.Drawing.Point(253, 406);
+            this.guna2TextBox10.Location = new System.Drawing.Point(192, 406);
             this.guna2TextBox10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TextBox10.Multiline = true;
             this.guna2TextBox10.Name = "guna2TextBox10";
@@ -817,7 +817,7 @@ namespace WindowsFormsApp6
             this.guna2TextBox10.SelectedText = "";
             this.guna2TextBox10.ShadowDecoration.Enabled = true;
             this.guna2TextBox10.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.guna2TextBox10.Size = new System.Drawing.Size(216, 127);
+            this.guna2TextBox10.Size = new System.Drawing.Size(277, 127);
             this.guna2TextBox10.TabIndex = 170;
             // 
             // guna2HtmlLabel28
@@ -827,11 +827,11 @@ namespace WindowsFormsApp6
             this.guna2HtmlLabel28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2HtmlLabel28.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel28.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel28.Location = new System.Drawing.Point(340, 357);
+            this.guna2HtmlLabel28.Location = new System.Drawing.Point(320, 356);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(129, 45);
+            this.guna2HtmlLabel28.Size = new System.Drawing.Size(137, 45);
             this.guna2HtmlLabel28.TabIndex = 169;
-            this.guna2HtmlLabel28.Text = "الجلسة تم ما";
+            this.guna2HtmlLabel28.Text = "بالجلسة تم ما";
             // 
             // guna2Button6
             // 
@@ -869,7 +869,7 @@ namespace WindowsFormsApp6
             this.lastprice.Font = new System.Drawing.Font("Cairo SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastprice.ForeColor = System.Drawing.Color.Black;
             this.lastprice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.lastprice.Location = new System.Drawing.Point(23, 406);
+            this.lastprice.Location = new System.Drawing.Point(3, 406);
             this.lastprice.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.lastprice.Multiline = true;
             this.lastprice.Name = "lastprice";
@@ -879,7 +879,7 @@ namespace WindowsFormsApp6
             this.lastprice.SelectedText = "";
             this.lastprice.ShadowDecoration.Enabled = true;
             this.lastprice.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.lastprice.Size = new System.Drawing.Size(216, 127);
+            this.lastprice.Size = new System.Drawing.Size(183, 127);
             this.lastprice.TabIndex = 160;
             // 
             // guna2HtmlLabel26
@@ -889,7 +889,7 @@ namespace WindowsFormsApp6
             this.guna2HtmlLabel26.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2HtmlLabel26.Font = new System.Drawing.Font("Cairo", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel26.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel26.Location = new System.Drawing.Point(64, 357);
+            this.guna2HtmlLabel26.Location = new System.Drawing.Point(-3, 356);
             this.guna2HtmlLabel26.Name = "guna2HtmlLabel26";
             this.guna2HtmlLabel26.Size = new System.Drawing.Size(177, 45);
             this.guna2HtmlLabel26.TabIndex = 161;
@@ -942,7 +942,7 @@ namespace WindowsFormsApp6
             this.price.Font = new System.Drawing.Font("Cairo SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price.ForeColor = System.Drawing.Color.Black;
             this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.price.Location = new System.Drawing.Point(22, 76);
+            this.price.Location = new System.Drawing.Point(2, 76);
             this.price.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.price.Multiline = true;
             this.price.Name = "price";
@@ -952,7 +952,7 @@ namespace WindowsFormsApp6
             this.price.SelectedText = "";
             this.price.ShadowDecoration.Enabled = true;
             this.price.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.price.Size = new System.Drawing.Size(217, 124);
+            this.price.Size = new System.Drawing.Size(184, 124);
             this.price.TabIndex = 14;
             this.price.TextChanged += new System.EventHandler(this.price_TextChanged);
             // 
@@ -1514,11 +1514,11 @@ namespace WindowsFormsApp6
             "",
             "لا",
             "نعم"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(253, 602);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(6, 602);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.ShadowDecoration.Enabled = true;
             this.guna2ComboBox1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.guna2ComboBox1.Size = new System.Drawing.Size(216, 39);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(180, 39);
             this.guna2ComboBox1.StartIndex = 0;
             this.guna2ComboBox1.TabIndex = 173;
             // 
@@ -1529,7 +1529,7 @@ namespace WindowsFormsApp6
             this.guna2HtmlLabel29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2HtmlLabel29.Font = new System.Drawing.Font("Cairo", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel29.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel29.Location = new System.Drawing.Point(332, 540);
+            this.guna2HtmlLabel29.Location = new System.Drawing.Point(49, 544);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
             this.guna2HtmlLabel29.Size = new System.Drawing.Size(137, 45);
             this.guna2HtmlLabel29.TabIndex = 174;

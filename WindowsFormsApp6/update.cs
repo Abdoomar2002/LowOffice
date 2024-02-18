@@ -224,6 +224,7 @@ namespace WindowsFormsApp6
                     return;
                 }
             }
+            if (caseDescision.Text == "حفظ" && guna2TextBox11.Text.Length < 1) { MessageBox.Show("اضف رقم الحفظ"); return; }
             CasesContext context = new CasesContext();
             context.Database.CreateIfNotExists();
 
@@ -289,7 +290,7 @@ namespace WindowsFormsApp6
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            if (caseDescision.Text == "حفظ" && guna2TextBox11.Text.Length < 1) { MessageBox.Show("اضف رقم الحفظ"); return; }
             CasesContext context = new CasesContext();
             context.Database.CreateIfNotExists();
 
